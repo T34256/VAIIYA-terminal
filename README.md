@@ -5,7 +5,9 @@ this is a game i had an idea for as no one else has had an idea for a Parody gam
 i hope this can become a thing everyone can enjoy! but right now in this moment there are no real things to do with this! 
 have a fun day and reach THE FINALS! and also Stay secure with VAIIYA Guard! 
 
+showcase for those who thought it was virus (made on 10/06/2024 mm/dd/yyyy)
+https://youtu.be/4lZ8X_rdWcQ
 
 
 
-last edited: 10/06/2024 mm/dd/yyy
+last edited: 10/06/2024 mm/dd/yyyy
