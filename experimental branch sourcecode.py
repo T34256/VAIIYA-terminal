@@ -73,12 +73,11 @@ def main_menu():
 # Start the TERMINAL and its commands
 def open_terminal():
 
-    prompt('awaiting command(s)>>>> ')
+#TODO: PLEASE FIX THIS FREAKIN COMMAND THING I CANT FIGURE IT OUT!!!
+    
+    #prompt('awaiting command(s)>>>> ')
 
-    text = 'hello'
-    print("i am bannana man")
     pass
-
 # Main system loop
 def game_loop():
     #startup_screen_ASCII()
