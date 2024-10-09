@@ -4,6 +4,7 @@ from prompt_toolkit.shortcuts import ProgressBar
 from prompt_toolkit.formatted_text import HTML
 from prompt_toolkit import prompt
 import time
+import base64
 
 # Loading screen with VAIIYA SECURITY ASCII Art
 def startup_screen_ASCII():
@@ -113,7 +114,7 @@ def open_terminal():
 def frostbyte_EE():
                 print("to exit, type EXIT in the password!")
                 text = prompt('frotbytes password: ', is_password=True)
-                if text == 'frostbyte_somthing_i_dont_know':
+                if text == frost_encoded_pass():
                     frostbytes_EE_entered()
                 if text == 'exit':
                     return
@@ -126,6 +127,14 @@ def frostbytes_EE_entered():
                         text = prompt('type EXIT to exit this page; ')
                         if text == 'exit':
                             return
+def frost_encoded_pass():
+    base64_string ="Ao_g2FCKN;ATM3t@<6L6DfT@"
+    base64_bytes = base64_string.encode("ascii",)
+
+    sample_string_bytes = base64.b64decode(base64_bytes, altchars=None, validate=False)
+    sample_string = sample_string_bytes.decode("ascii")
+
+result = frost_encoded_pass()
 
 # Main system loop
 def game_loop():
