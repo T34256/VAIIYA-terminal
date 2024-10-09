@@ -73,11 +73,60 @@ def main_menu():
 # Start the TERMINAL and its commands
 def open_terminal():
 
-#TODO: PLEASE FIX THIS FREAKIN COMMAND THING I CANT FIGURE IT OUT!!!
-    
-    #prompt('awaiting command(s)>>>> ')
+    while True:
+        text = prompt('awaiting commands>>>> ')
+#put all the usercommands under here please! 
 
-    pass
+        if text == 't342':
+            print('wrong answer')
+            continue
+        
+        # FROST EE WIP!! 
+        if text == 'frostbyte':
+            print("loading frostbyte EE...")
+            frostbyte_EE()
+
+
+#below are all the non-user commands, DO NOT REMOVE!
+            #the COMMANDS directory, DO NOT REMOVE!
+        if text == 'commands':
+            print("Commands;")
+            print("placeholder here | explanation here")
+            print("placeholder here | explanation here")
+            print("placeholder here | explanation here")
+            print("placeholder here | explanation here")
+            print("placeholder here | explanation here")
+            
+            
+            #the EXIT command, DO NOT REMOVE!! 
+        if text == 'exit':
+            print('exiting the terminal... have a nice day!')
+            time.sleep(0.5)
+            exit()
+        
+        #error response
+        else:
+            print("uhh, hmm, i dont think thats a command friend! type 'commands' for a list of commands!")
+
+
+# FROST EE STUFF OVER HERE!
+def frostbyte_EE():
+                print("to exit, type EXIT in the password!")
+                text = prompt('frotbytes password: ', is_password=True)
+                if text == 'frostbyte_somthing_i_dont_know':
+                    frostbytes_EE_entered()
+                if text == 'exit':
+                    return
+                else:
+                    print("Sorry! wrong password!")
+
+# 2nd part to the FROST EE                     
+def frostbytes_EE_entered():
+
+                        text = prompt('type EXIT to exit this page; ')
+                        if text == 'exit':
+                            return
+
 # Main system loop
 def game_loop():
     #startup_screen_ASCII()
