@@ -3,6 +3,8 @@ import os
 from prompt_toolkit.shortcuts import ProgressBar
 from prompt_toolkit.formatted_text import HTML
 from prompt_toolkit import prompt
+from prompt_toolkit.shortcuts import message_dialog
+from prompt_toolkit.shortcuts import yes_no_dialog
 import time
 import bcrypt
 
@@ -77,15 +79,22 @@ def open_terminal():
     while True:
         text = prompt('awaiting commands>>>> ')
 #put all the usercommands under here please! 
+        if text == 'CNS':
+            print("running secondary program...")
+            time.sleep(2)
+            CNS_EE_HAKED()
 
         if text == 't342':
-            print('wrong answer')
+            print('heyy thanks for sayin somthin!')
             continue
         
+
+
         #BUG: the error "no command" will reply when exiting the FROST EE!
         # FROST EE WIP!! 
         if text == 'frostbyte':
             print("loading frostbyte EE...")
+            #enters the frostbyte EE
             frostbyte_EE()
 
 
@@ -109,6 +118,30 @@ def open_terminal():
         #error response
         else:
             print("uhh, hmm, i dont think thats a command friend! type 'commands' for a list of commands!")
+
+# PLEASE PUT ALL 2ND DEF(S) BELOW THIS NOTE! 
+
+# the CNS EE below this messange
+def CNS_EE_HAKED():
+    result = yes_no_dialog(
+    title='Do you want, the TrUtH?',
+    text='Do you want to confirm? dO yOU wAnT ThE tRUTh? Do YoU WaNt tHe tRUTh? Do YoU WaNt tHe tRUTh?').run()
+    if result == True:
+         message_dialog(
+    title='CNS CNS CNS CNS CNS CNS SeeK tHe TrutH',
+    text='very well then, we will see you soon enough').run()
+         
+         print(" FATAL ERROR!: VAIIYA defenter has encountered an error! please restart the program to continue!")
+         time.sleep(4)
+         exit()
+    if result == False:
+         message_dialog(
+    title='CNS CNS CNS CNS CNS CNS SeeK tHe TrutH',
+    text='how dissapointing, that you dont want tHe TrutH. we will see you soon enough').run()
+         
+         print(" FATAL ERROR!: VAIIYA defenter has encountered an error! please restart the program to continue!")
+         time.sleep(4)
+         exit()
 
 
 #hehe youll never get de password now! ahahahah AHAHAHAHA 
@@ -141,8 +174,8 @@ def frostbytes_EE_entered():
 
 # Main system loop
 def game_loop():
-    startup_screen_ASCII()
-    loading_bars_into()
+    #startup_screen_ASCII()
+    #loading_bars_into()
     main_menu()
     open_terminal()
     
