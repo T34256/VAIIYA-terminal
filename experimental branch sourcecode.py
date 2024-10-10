@@ -4,7 +4,7 @@ from prompt_toolkit.shortcuts import ProgressBar
 from prompt_toolkit.formatted_text import HTML
 from prompt_toolkit import prompt
 import time
-import base64
+import bcrypt
 
 # Loading screen with VAIIYA SECURITY ASCII Art
 def startup_screen_ASCII():
@@ -82,6 +82,7 @@ def open_terminal():
             print('wrong answer')
             continue
         
+        #BUG: the error "no command" will reply when exiting the FROST EE!
         # FROST EE WIP!! 
         if text == 'frostbyte':
             print("loading frostbyte EE...")
@@ -110,36 +111,38 @@ def open_terminal():
             print("uhh, hmm, i dont think thats a command friend! type 'commands' for a list of commands!")
 
 
+#hehe youll never get de password now! ahahahah AHAHAHAHA 
+#frostEEpswrd1
+hash = b'$2b$12$AUur7AKX1aGQurOlmM46Pu0OX9HXqx6UHH9SHiEvrCJM56JvUjYfu'
 # FROST EE STUFF OVER HERE!
 def frostbyte_EE():
-                print("to exit, type EXIT in the password!")
-                text = prompt('frotbytes password: ', is_password=True)
-                if text == frost_encoded_pass():
-                    frostbytes_EE_entered()
-                if text == 'exit':
-                    return
-                else:
-                    print("Sorry! wrong password!")
-
+                
+                
+    print("to exit, type EXIT in the password!")
+    userpassword = text = prompt('frotbytes password: ', is_password=True)
+    
+    userpassword = userpassword.encode('utf-8')
+               
+    #comapre password hashes
+    result = bcrypt.checkpw(userpassword, hash)
+    if result:
+          frostbytes_EE_entered()
+    if text == 'exit':
+        return
 # 2nd part to the FROST EE                     
 def frostbytes_EE_entered():
-
+                        print(f"""welcome frostbyte! to your ee! dont worry, no one will find your password ^_+ """)
                         text = prompt('type EXIT to exit this page; ')
                         if text == 'exit':
                             return
-def frost_encoded_pass():
-    base64_string ="Ao_g2FCKN;ATM3t@<6L6DfT@"
-    base64_bytes = base64_string.encode("ascii",)
+#END OF FROST EE CODE, 
 
-    sample_string_bytes = base64.b64decode(base64_bytes, altchars=None, validate=False)
-    sample_string = sample_string_bytes.decode("ascii")
 
-result = frost_encoded_pass()
 
 # Main system loop
 def game_loop():
-    #startup_screen_ASCII()
-    #loading_bars_into()
+    startup_screen_ASCII()
+    loading_bars_into()
     main_menu()
     open_terminal()
     
