@@ -174,8 +174,8 @@ def frostbytes_EE_entered():
 
 # Main system loop
 def game_loop():
-    #startup_screen_ASCII()
-    #loading_bars_into()
+    startup_screen_ASCII()
+    loading_bars_into()
     main_menu()
     open_terminal()
     
