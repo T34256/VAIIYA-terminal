@@ -77,7 +77,8 @@ def main_menu():
 def open_terminal():
 
     while True:
-        text = prompt('awaiting commands>>>> ')
+        print(" for a list of commands, please type 'commands' ")
+        text = prompt('awaiting command(s)>>> ')
 #put all the usercommands under here please! 
         if text == 'CNS':
             print("running secondary program...")
@@ -89,13 +90,18 @@ def open_terminal():
             continue
         
 
+        if text == 'walker':
+            print("welcome walker to your login! please wait while your coffee brews.......")
+            time.sleep(3)
+            walker_login()
 
         #BUG: the error "no command" will reply when exiting the FROST EE!
         # FROST EE WIP!! 
         if text == 'frostbyte':
-            print("loading frostbyte EE...")
+            print("welcome frostbyte to your login! please wait while i startup the supercomputer and freeze these bytes!....")
+            time.sleep(3)
             #enters the frostbyte EE
-            frostbyte_EE()
+            frostbyte_login()
 
 
 #below are all the non-user commands, DO NOT REMOVE!
@@ -124,11 +130,11 @@ def open_terminal():
 # the CNS EE below this messange
 def CNS_EE_HAKED():
     result = yes_no_dialog(
-    title='Do you want, the TrUtH?',
-    text='Do you want to confirm? dO yOU wAnT ThE tRUTh? Do YoU WaNt tHe tRUTh? Do YoU WaNt tHe tRUTh?').run()
+    title='CNS.02.06.01',
+    text='dO yOU wAnT ThE tRUTh?').run()
     if result == True:
          message_dialog(
-    title='CNS CNS CNS CNS CNS CNS SeeK tHe TrutH',
+    title='CNS.02.06.01',
     text='very well then, we will see you soon enough').run()
          
          print(" FATAL ERROR!: VAIIYA defenter has encountered an error! please restart the program to continue!")
@@ -136,19 +142,47 @@ def CNS_EE_HAKED():
          exit()
     if result == False:
          message_dialog(
-    title='CNS CNS CNS CNS CNS CNS SeeK tHe TrutH',
+    title='CNS.02.06.01',
     text='how dissapointing, that you dont want tHe TrutH. we will see you soon enough').run()
          
          print(" FATAL ERROR!: VAIIYA defenter has encountered an error! please restart the program to continue!")
          time.sleep(4)
          exit()
 
-
-#hehe youll never get de password now! ahahahah AHAHAHAHA 
+#add passwords here for the logins and name the vars respectivly 
+#hehe youll never get the passwords now! AHAHAHAHAHA! 
+#walkerpasswrd1
+walkerhash = b'$2b$12$M7LXCClyfsnN9SjibtnEmuLEOlR68H2ovjCBA0zcAIBs2RHBzOnFy'
 #frostEEpswrd1
-hash = b'$2b$12$AUur7AKX1aGQurOlmM46Pu0OX9HXqx6UHH9SHiEvrCJM56JvUjYfu'
+frosthash = b'$2b$12$AUur7AKX1aGQurOlmM46Pu0OX9HXqx6UHH9SHiEvrCJM56JvUjYfu'
+
+
+#walker login here
+def walker_login():
+    print("Welcome walker! please put in your password that i gave you!")
+    print("To exit, please type 'EXIT' in the password prompt!")
+    #password prompt; 
+    userpassword = text = prompt('walkers password: ', is_password=True)
+    #encodes the given password for comapare
+    userpassword = userpassword.encode('utf-8')
+               
+    #comapre password hashes, if identical then "result" == True, then it will move onto walker_entered
+    result = bcrypt.checkpw(userpassword, walkerhash)
+    if result:
+          walker_entered()
+    if text == 'exit':
+        return
+#end of walker password varifi 
+def walker_entered():
+    print("welcome walker! here currnently there is nothing, i have no idea what to put here for you guys.")
+    print("but id assume you are familiar with github so if you have an idea i would more than glad take a look and try to implement it! ")
+    text = prompt("type EXIT to exit this page; ")
+    if text == 'exit':
+        return
+        #end of walker login/EE
+
 # FROST EE STUFF OVER HERE!
-def frostbyte_EE():
+def frostbyte_login():
                 
                 
     print("to exit, type EXIT in the password!")
@@ -157,17 +191,17 @@ def frostbyte_EE():
     userpassword = userpassword.encode('utf-8')
                
     #comapre password hashes
-    result = bcrypt.checkpw(userpassword, hash)
+    result = bcrypt.checkpw(userpassword, frosthash)
     if result:
           frostbytes_EE_entered()
     if text == 'exit':
         return
 # 2nd part to the FROST EE                     
 def frostbytes_EE_entered():
-                        print(f"""welcome frostbyte! to your ee! dont worry, no one will find your password ^_+ """)
-                        text = prompt('type EXIT to exit this page; ')
-                        if text == 'exit':
-                            return
+    print(f"""welcome frostbyte! to your ee/login! dont worry, no one will find your password ^_+ """)
+    text = prompt("type EXIT to exit this page;")
+    if text == 'exit':
+        return
 #END OF FROST EE CODE, 
 
 
