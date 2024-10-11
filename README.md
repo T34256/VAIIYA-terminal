@@ -21,13 +21,15 @@ also as a side note: this will be a very good experemantation for password prote
 *and the EXE files are made with the py2exe-gui tool (look it up)*
 
 
-![image](https://github.com/user-attachments/assets/6108aee6-6a45-48ac-a279-0b827e6852fb)
-
-(image made durring 0.0.1-a things are subject to change!)
+![image](https://github.com/user-attachments/assets/af8ad769-c6f0-4ebb-8c6a-2a9871b3ed95)
 
 
-![image](https://github.com/user-attachments/assets/cb2445c8-cd75-4ef3-ac15-d401e1352b14)
+(image made durring 0.0.4 things are subject to change!)
 
-(image made durring 0.0.1-a things are subject to change!)
 
-last edited: 10/08/2024 mm/dd/yyyy
+![image](https://github.com/user-attachments/assets/b5a2b82d-28c3-47fc-9267-80787657cd89)
+
+
+(image made durring 0.0.4 things are subject to change!)
+
+last edited: 10/10/2024 mm/dd/yyyy
