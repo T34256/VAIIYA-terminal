@@ -5,8 +5,13 @@ from prompt_toolkit.formatted_text import HTML
 from prompt_toolkit import prompt
 from prompt_toolkit.shortcuts import message_dialog
 from prompt_toolkit.shortcuts import yes_no_dialog
+from prompt_toolkit.shortcuts import input_dialog
 import time
 import bcrypt
+from datetime import datetime
+from prompt_toolkit import print_formatted_text, HTML
+
+
 
 # Loading screen with VAIIYA SECURITY ASCII Art
 def startup_screen_ASCII():
@@ -70,8 +75,16 @@ def main_menu():
 |______||______||______||______||______||______||______||______||______||______||______||______||______|
 
                                 Welcome to the VAIIYA terminal!
-            Use this handy dandy terminal for all your duties at VAIIYA security corp!  
+            Use this handy dandy terminal for all your duties at VAIIYA cybersecurity corp!  
     """)
+def timefetch():
+#time fetch for login
+    curtime = datetime.now().strftime('%H:%M:%S') 
+    curdate = datetime.now().strftime('%Y-%m-%d')
+
+    print('Welcome VAIIYA trustee! the time is: ',curtime)
+    print('and the date is: ',curdate)
+    print("have a wonerful day at VAIIYA cybersecurity corp!")
 
 # Start the TERMINAL and its commands
 def open_terminal():
@@ -80,6 +93,13 @@ def open_terminal():
         print(" for a list of commands, please type 'commands' ")
         text = prompt('awaiting command(s)>>> ')
 #put all the usercommands under here please! 
+        
+
+
+        
+        
+        
+        
         if text == 'CNS':
             print("running secondary program...")
             time.sleep(2)
@@ -127,6 +147,12 @@ def open_terminal():
 
 # PLEASE PUT ALL 2ND DEF(S) BELOW THIS NOTE! 
 
+
+
+
+
+
+#PUT ALL OTHER NON SUBCOMMAND DEFs BELOW HERE!
 # the CNS EE below this messange
 def CNS_EE_HAKED():
     result = yes_no_dialog(
@@ -149,6 +175,8 @@ def CNS_EE_HAKED():
          time.sleep(4)
          exit()
 
+
+
 #add passwords here for the logins and name the vars respectivly 
 #hehe youll never get the passwords now! AHAHAHAHAHA! 
 #walkerpasswrd1
@@ -159,34 +187,36 @@ frosthash = b'$2b$12$AUur7AKX1aGQurOlmM46Pu0OX9HXqx6UHH9SHiEvrCJM56JvUjYfu'
 
 #walker login here
 def walker_login():
-    print("Welcome walker! please put in your password that i gave you!")
-    print("To exit, please type 'EXIT' in the password prompt!")
+    
     #password prompt; 
-    userpassword = text = prompt('walkers password: ', is_password=True)
+    userpassword = text = input_dialog(
+    title='Walker password input',
+    text='walker password:').run()
     #encodes the given password for comapare
     userpassword = userpassword.encode('utf-8')
-               
+
     #comapre password hashes, if identical then "result" == True, then it will move onto walker_entered
     result = bcrypt.checkpw(userpassword, walkerhash)
     if result:
           walker_entered()
-    if text == 'exit':
-        return
 #end of walker password varifi 
+
 def walker_entered():
     print("welcome walker! here currnently there is nothing, i have no idea what to put here for you guys.")
     print("but id assume you are familiar with github so if you have an idea i would more than glad take a look and try to implement it! ")
     text = prompt("type EXIT to exit this page; ")
     if text == 'exit':
         return
-        #end of walker login/EE
+        #end of walker login
 
 # FROST EE STUFF OVER HERE!
 def frostbyte_login():
                 
                 
     print("to exit, type EXIT in the password!")
-    userpassword = text = prompt('frotbytes password: ', is_password=True)
+    userpassword = text = input_dialog(
+    title='frostbyte password input',
+    text='frostbyte password:').run()
     
     userpassword = userpassword.encode('utf-8')
                
@@ -198,8 +228,23 @@ def frostbyte_login():
         return
 # 2nd part to the FROST EE                     
 def frostbytes_EE_entered():
+    
+    message_dialog(
+    title='VAIIYA Warning systems',
+    text='VAIIYA TERMINAL WARNING AWAITING ATTENTION!').run()
+    
+    message_dialog(
+    title='VAIIYA Warning systems',
+    text='VAIIYA employee T342 has marked you as "requires careful observation and mental medical attention." so the VAIIYA system observation drones will now observe you.').run()
+
+    message_dialog(
+    title='VAIIYA Warning systems',
+    text='thank you for your attention. you may continue your tasks and have a safe day!').run()
+    
+    
     print(f"""welcome frostbyte! to your ee/login! dont worry, no one will find your password ^_+ """)
     text = prompt("type EXIT to exit this page;")
+    
     if text == 'exit':
         return
 #END OF FROST EE CODE, 
@@ -211,6 +256,7 @@ def game_loop():
     startup_screen_ASCII()
     loading_bars_into()
     main_menu()
+    timefetch()
     open_terminal()
     
     while True:
