@@ -49,8 +49,8 @@ def startup_screen_ASCII():
 
 def loading_bars_intro_1():
 
-    title = HTML('<style bg="blue" fg="black">Connecting to the VAIIYA Defender framework....</style>')
-    label = HTML('<ansired>Connecting</ansired>.... ')
+    title = HTML('Connecting to the VAIIYA Defender framework....')
+    label = HTML('')
 
     # loading screen system with prompTK
     with ProgressBar(title=title) as pb:
@@ -61,19 +61,33 @@ def loading_bars_intro_1():
 def loading_bars_intro_2():
 
     title = HTML('Checking root for verification codes....')
-    #label = HTML('')
+    label = HTML('')
 
     # loading screen system with prompTK
     with ProgressBar(title=title) as pb:
-        for i in pb(range(300), label=label):
+        for i in pb(range(215), label=label):
             time.sleep(.01)
     time.sleep(1)
 
 
 def loading_bars_intro_3():
 
-    pass
+    title = HTML('Sending system logs and debug info for system approval')
+    label = HTML('')
 
+    # loading screen system with prompTK
+    with ProgressBar(title=title) as pb:
+        for i in pb(range(175), label=label):
+            time.sleep(.01)
+    time.sleep(1)
+    
+    print("connection: approved")
+    time.sleep(0.3)
+    print("codes found! checking with system.... approved!")
+    time.sleep(0.2)
+    print("sending logs.... approved! sending debug... approved! ")
+    time.sleep(0.1)
+    print("All connections approved! opening VAIIYA terminal....")
 
 
 # Display main menu
