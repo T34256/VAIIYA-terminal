@@ -23,12 +23,12 @@ from prompt_toolkit import print_formatted_text, HTML
 #windll.kernel32.SetConsoleWindowInfo(hdl, True, byref(rect))
 
 
-
+#NOTE: THERE MAY BE MINOR LINE WRAP IN THE ASCII
 # Loading screen with VAIIYA SECURITY ASCII Art
 def startup_screen_ASCII():
     print(r"""
 
-#NOTE: THERE MAY BE MINOR LINE WRAP IN THE ASCII 
+ 
                                              __________   __________
                                              \|||||||||\ \::::::::::\
                                               \|||||||||\ \::::::::::\
