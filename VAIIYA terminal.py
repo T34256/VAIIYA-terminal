@@ -212,30 +212,34 @@ def open_terminal():
 #PUT ALL OTHER NON SUBCOMMAND DEFs BELOW HERE!
 # the CNS EE below this messange
 def CNS_EE_HAKED():
+    #below is the Y/N prompt for CNS, and the following `result` can be split into a bool and set as True or False
     result = yes_no_dialog(
     title='CNS.02.06.01',
     text='dO yOU wAnT ThE tRUTh?').run()
+    #if the `result` has a bool of True, it will run this part of the code. 
     if result == True:
          message_dialog(
     title='CNS.02.06.01',
     text='very well then, we will see you soon enough').run()
-         
-         print(" FATAL ERROR!: VAIIYA defenter has encountered an error! please restart the program to continue!")
+         #then after it retuns to the main menu and exits the program.
+         print("VAIIYA DEFENDER ENGINE CRITICAL FAILURE!: THE VAIIYA DEFENDER ENGINE HAS FOUND A BREACH AND WILL NOW FORCE QUIT THE PROGRAM")
          time.sleep(4)
          exit()
+    #if the `result` has a bool of False, then it will run this part of code. and again will return to menu and exit the program. 
     if result == False:
          message_dialog(
     title='CNS.02.06.01',
     text='how dissapointing, that you dont want tHe TrutH. we will see you soon enough').run()
-         
-         print(" FATAL ERROR!: VAIIYA defenter has encountered an error! please restart the program to continue!")
+         print("VAIIYA DEFENDER ENGINE CRITICAL FAILURE!: THE VAIIYA DEFENDER ENGINE HAS FOUND A BREACH AND WILL NOW FORCE QUIT THE PROGRAM")
          time.sleep(4)
          exit()
 
 
-
-#add passwords here for the logins and name the vars respectivly 
-#hehe youll never get the passwords now! AHAHAHAHAHA! 
+#add passwords here for the logins and name the vars respectivly.
+# 
+#the website for reference to the password system is https://www.geeksforgeeks.org/npm-bcrypt/ 
+# 
+#  
 #walkerpasswrd1
 walkerhash = b'$2b$12$M7LXCClyfsnN9SjibtnEmuLEOlR68H2ovjCBA0zcAIBs2RHBzOnFy'
 #frostEEpswrd1
@@ -244,7 +248,8 @@ frosthash = b'$2b$12$AUur7AKX1aGQurOlmM46Pu0OX9HXqx6UHH9SHiEvrCJM56JvUjYfu'
 
 #walker login here
 def walker_login():
-    
+    #when exiting the prompt with the `<cancel>`, the program will forcequit for some reason. 
+
     #password prompt; 
     userpassword = text = input_dialog(
     title='Walker password input',
@@ -269,7 +274,7 @@ def walker_entered():
 # FROST EE STUFF OVER HERE!
 def frostbyte_login():
                 
-                
+    #there is a bug that cuases the `no command` string to print when exiting.
     print("to exit, type EXIT in the password!")
     userpassword = text = input_dialog(
     title='frostbyte password input',
@@ -286,6 +291,7 @@ def frostbyte_login():
 # 2nd part to the FROST EE                     
 def frostbytes_EE_entered():
     
+    #the following prompts from promptTK are for frost taling about UwU more and more ¯\_(ツ)_/¯
     message_dialog(
     title='VAIIYA Warning systems',
     text='VAIIYA TERMINAL WARNING AWAITING ATTENTION!').run()
@@ -320,15 +326,20 @@ def game_loop():
     open_terminal()
     
     while True:
-
+        #there is no code to run right before startup so there is a `pass` here. 
             pass
 
 # Start the game
 game_loop()
 
 
+#this func is not required for the operation of the program, so it is disabled.
+
+
 #if __name__ == "__main__":
 #        main()
+
+#the notes below are very old. (maybe from v0.0.2 or v0.0.3)
 
 
 
