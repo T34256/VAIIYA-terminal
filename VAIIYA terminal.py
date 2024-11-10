@@ -13,14 +13,11 @@ from datetime import datetime
 from prompt_toolkit import print_formatted_text, HTML
 
 #changes the size of the Command promp so it is easyer to read (and that the ASCII doesnt soft wrap)
-from ctypes import windll, byref
-from ctypes.wintypes import SMALL_RECT
-
 
 def window_resize_startup():
-
 #put the CMD reisze code here, this is disabled for the tiem being 
-    pass
+    CMD = "mode 1000,1000"
+    os.system(CMD)
 
 
 
