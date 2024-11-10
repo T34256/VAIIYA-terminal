@@ -1,3 +1,4 @@
+from ctypes import wintypes
 import time
 import os
 from prompt_toolkit.shortcuts import ProgressBar
@@ -12,18 +13,20 @@ from datetime import datetime
 from prompt_toolkit import print_formatted_text, HTML
 
 #changes the size of the Command promp so it is easyer to read (and that the ASCII doesnt soft wrap)
-#from ctypes import windll, byref
-#from ctypes.wintypes import SMALL_RECT
+from ctypes import windll, byref
+from ctypes.wintypes import SMALL_RECT
 
-#STDOUT = -11
 
-#hdl = windll.kernel32.GetStdHandle(STDOUT)
-#currently broken without wintypes
-#rect = wintypes.SMALL_RECT(0, 50, 50, 80) # (left, top, right, bottom)
-#windll.kernel32.SetConsoleWindowInfo(hdl, True, byref(rect))
+def window_resize_startup():
+
+#put the CMD reisze code here, this is disabled for the tiem being 
+    pass
+
+
 
 
 #NOTE: THERE MAY BE MINOR LINE WRAP IN THE ASCII
+
 # Loading screen with VAIIYA SECURITY ASCII Art
 def startup_screen_ASCII():
     print(r"""
@@ -310,6 +313,7 @@ def frostbytes_EE_entered():
 
 # Main system loop
 def game_loop():
+    #window_resize_startup()
     startup_screen_ASCII()
     loading_bars_intro_1()
     loading_bars_intro_2()
