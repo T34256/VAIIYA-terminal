@@ -129,7 +129,7 @@ def main_menu():
 |______||______||______||______||______||______||______||______||______||______||______||______||______|
 
                                 Welcome to the VAIIYA terminal!
-            Use this handy dandy terminal for all your duties at VAIIYA cybersecurity corp!  
+            Use this handy dandy terminal for all your duties at VAIIYA Technologies LLC!  
     """)
 def timefetch():
 #time fetch for login
