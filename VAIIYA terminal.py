@@ -11,39 +11,50 @@ import bcrypt
 from datetime import datetime
 from prompt_toolkit import print_formatted_text, HTML
 
+#changes the size of the Command promp so it is easyer to read (and that the ASCII doesnt soft wrap)
+#from ctypes import windll, byref
+#from ctypes.wintypes import SMALL_RECT
+
+#STDOUT = -11
+
+#hdl = windll.kernel32.GetStdHandle(STDOUT)
+#currently broken without wintypes
+#rect = wintypes.SMALL_RECT(0, 50, 50, 80) # (left, top, right, bottom)
+#windll.kernel32.SetConsoleWindowInfo(hdl, True, byref(rect))
+
 
 
 # Loading screen with VAIIYA SECURITY ASCII Art
 def startup_screen_ASCII():
     print(r"""
 
-                                                                                                                                                                                                                                                                          
-                                                          ___________   ____________                                                                                                                                                                                              
-                                                         \|||||||||||\ \::::::::::::\                                                                                                           
-                                                          \|||||||||||\ \::::::::::::\                                                                                                
-                                                           \|||||||||||\ \::::::::::::\                                                                                              
-                                                            \|||||||||||\ \::::::::::::\                                                                                              
-\-------\             /------------/  /-----------\  \----------\  \----------\  \----------\           /-----------/  /-----------\                                      
- \.......\           /............/  /.............\  \..........\  \..........\  \..........\         /.........../  /.............\                                     
-  \.......\         /............/  /...............\  \..........\  \..........\  \..........\       /.........../  /...............\                                   
-   \.......\       /............/  /.................\  \..........\  \..........\  \..........\     /.........../  /.................\                                  
-    \.......\     /............/  /........__.........\  \..........\  \..........\  \..........\   /.........../  /...................\                                 
-     \.......\   /............/  /......../  \.........\  \..........\  \..........\  \..........\_/.........../  /........./  \........\                              
-      \.......\ /............/  /......../    \.........\  \..........\  \..........\  \....................../  /........./    \........\                            
-       \..................../  /......../      \.........\  \..........\  \..........\  \..................../  /........./      \........\                           
-        \................../  /......../        \.........\  \..........\  \..........\  \................../  /........./        \........\                          
-         \................/  /......../          \.........\  \..........\  \..........\  \................/  /........./          \........\                        
-          \............../  /......../            \.........\  \..........\  \..........\  \............../  /........./            \........\                     
-                                                                                           /............./                                                                   
-                                                                                          /............./                                                                       
-                                                                                         /............./                                                                        
-                                                                                        /............./                                                                          
-                                                                                       /............./                                                                           
-                                                                                      /-------------/                                                                             
+#NOTE: THERE MAY BE MINOR LINE WRAP IN THE ASCII 
+                                             __________   __________
+                                             \|||||||||\ \::::::::::\
+                                              \|||||||||\ \::::::::::\
+                                               \|||||||||\ \::::::::::\
+                                                \|||||||||\ \::::::::::\
+\-------\             /--------/  /-------\  \--------\  \--------\  \--------\           /---------/  /-------\
+ \.......\           /......../  /.........\  \........\  \........\  \........\         /........./  /.........\
+  \.......\         /......../  /...........\  \........\  \........\  \........\       /........./  /...........\
+   \.......\       /......../  /.............\  \........\  \........\  \........\     /........./  /.............\
+    \.......\     /......../  /......__.......\  \........\  \........\  \........\   /........./  /...............\
+     \.......\   /......../  /....../  \.......\  \........\  \........\  \........\_/........./  /......./  \......\
+      \.......\ /......../  /....../    \.......\  \........\  \........\  \................../  /......./    \......\
+       \................/  /....../      \.......\  \........\  \........\  \................/  /......./      \......\
+        \............../  /....../        \.......\  \........\  \........\  \............../  /......./        \......\
+         \............/  /....../          \.......\  \........\  \........\  \............/  /......./          \......\
+          \........../  /....../            \.......\  \........\  \........\  \........../  /......./            \......\
+                                                                               /........./
+                                                                              /........./
+                                                                             /........./
+                                                                            /........./
+                                                                           /---------/
+                                                    VAIIYA technologies LLC
+                                            Empowering security, one byte at a time.
 
-
-                                                               
-                                                    Welcome to the VAIIYA SECURITY terminal! 
+                                            
+                                    please wait while the program does mandatory checks.
     """)
 #title stuff for new loadin screen 
 
@@ -57,7 +68,10 @@ def loading_bars_intro_1():
         for i in pb(range(300), label=label):
             time.sleep(.01)
     time.sleep(1)
-        
+    
+    print("connection: approved")
+    time.sleep(0.3)
+
 def loading_bars_intro_2():
 
     title = HTML('Checking root for verification codes....')
@@ -68,7 +82,9 @@ def loading_bars_intro_2():
         for i in pb(range(215), label=label):
             time.sleep(.01)
     time.sleep(1)
-
+    
+    print("codes found! checking with system.... approved!")
+    time.sleep(0.2)
 
 def loading_bars_intro_3():
 
@@ -81,14 +97,12 @@ def loading_bars_intro_3():
             time.sleep(.01)
     time.sleep(1)
     
-    print("connection: approved")
-    time.sleep(0.3)
-    print("codes found! checking with system.... approved!")
-    time.sleep(0.2)
     print("sending logs.... approved! sending debug... approved! ")
-    time.sleep(0.1)
+    time.sleep(0.3)
+    
+    
     print("All connections approved! opening VAIIYA terminal....")
-
+    time.sleep(0.5)
 
 # Display main menu
 def main_menu():
@@ -124,7 +138,7 @@ def timefetch():
 
     print('Welcome VAIIYA trustee! the time is: ',curtime)
     print('and the date is: ',curdate)
-    print("have a wonerful day at VAIIYA cybersecurity corp!")
+    print("have a wonerful day at VAIIYA Technologies LLC!")
 
 # Start the TERMINAL and its commands
 def open_terminal():
