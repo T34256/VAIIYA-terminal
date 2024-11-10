@@ -184,14 +184,17 @@ def open_terminal():
 #below are all the non-user commands, DO NOT REMOVE!
             #the COMMANDS directory, DO NOT REMOVE!
         if text == 'commands':
-            print("Commands;")
+            print("""|""")
+            print("""|""")
+            print("Avalible commands: (all may not be listed.)")
+            print("""|""")
+            print("command: walker | The login for CM|walker")
+            print("command: frostbyte | The login for CM|frostbyte")
             print("placeholder here | explanation here")
             print("placeholder here | explanation here")
-            print("placeholder here | explanation here")
-            print("placeholder here | explanation here")
-            print("placeholder here | explanation here")
-            
-            
+            print("""C0MM#ND: CNS | {ERROR: UNKNOWN PROGRAM ENTITY}""")
+            print("""|""")
+            print("""|""")
             #the EXIT command, DO NOT REMOVE!! 
         if text == 'exit':
             print('exiting the terminal... have a nice day!')
