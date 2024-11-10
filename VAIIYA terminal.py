@@ -11,44 +11,98 @@ import bcrypt
 from datetime import datetime
 from prompt_toolkit import print_formatted_text, HTML
 
+#changes the size of the Command promp so it is easyer to read (and that the ASCII doesnt soft wrap)
+#from ctypes import windll, byref
+#from ctypes.wintypes import SMALL_RECT
+
+#STDOUT = -11
+
+#hdl = windll.kernel32.GetStdHandle(STDOUT)
+#currently broken without wintypes
+#rect = wintypes.SMALL_RECT(0, 50, 50, 80) # (left, top, right, bottom)
+#windll.kernel32.SetConsoleWindowInfo(hdl, True, byref(rect))
 
 
+#NOTE: THERE MAY BE MINOR LINE WRAP IN THE ASCII
 # Loading screen with VAIIYA SECURITY ASCII Art
 def startup_screen_ASCII():
     print(r"""
-██╗   ██╗ █████╗ ██╗██╗██╗   ██╗ █████╗                       
-██║   ██║██╔══██╗██║██║╚██╗ ██╔╝██╔══██╗                      
-██║   ██║███████║██║██║ ╚████╔╝ ███████║                      
-╚██╗ ██╔╝██╔══██║██║██║  ╚██╔╝  ██╔══██║                      
- ╚████╔╝ ██║  ██║██║██║   ██║   ██║  ██║                      
-  ╚═══╝  ╚═╝  ╚═╝╚═╝╚═╝   ╚═╝   ╚═╝  ╚═╝                      
-███████╗███████╗ ██████╗██╗   ██╗██████╗ ██╗████████╗██╗   ██╗
-██╔════╝██╔════╝██╔════╝██║   ██║██╔══██╗██║╚══██╔══╝╚██╗ ██╔╝
-███████╗█████╗  ██║     ██║   ██║██████╔╝██║   ██║    ╚████╔╝ 
-╚════██║██╔══╝  ██║     ██║   ██║██╔══██╗██║   ██║     ╚██╔╝  
-███████║███████╗╚██████╗╚██████╔╝██║  ██║██║   ██║      ██║   
-╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝   
-███████╗██╗   ██╗███████╗████████╗███████╗███╗   ███╗███████╗ 
-██╔════╝╚██╗ ██╔╝██╔════╝╚══██╔══╝██╔════╝████╗ ████║██╔════╝ 
-███████╗ ╚████╔╝ ███████╗   ██║   █████╗  ██╔████╔██║███████╗ 
-╚════██║  ╚██╔╝  ╚════██║   ██║   ██╔══╝  ██║╚██╔╝██║╚════██║ 
-███████║   ██║   ███████║   ██║   ███████╗██║ ╚═╝ ██║███████║ 
-╚══════╝   ╚═╝   ╚══════╝   ╚═╝   ╚══════╝╚═╝     ╚═╝╚══════╝ 
 
-              Welcome to the VAIIYA SECURITY terminal! 
+ 
+                                             __________   __________
+                                             \|||||||||\ \::::::::::\
+                                              \|||||||||\ \::::::::::\
+                                               \|||||||||\ \::::::::::\
+                                                \|||||||||\ \::::::::::\
+\-------\             /--------/  /-------\  \--------\  \--------\  \--------\           /---------/  /-------\
+ \.......\           /......../  /.........\  \........\  \........\  \........\         /........./  /.........\
+  \.......\         /......../  /...........\  \........\  \........\  \........\       /........./  /...........\
+   \.......\       /......../  /.............\  \........\  \........\  \........\     /........./  /.............\
+    \.......\     /......../  /......__.......\  \........\  \........\  \........\   /........./  /...............\
+     \.......\   /......../  /....../  \.......\  \........\  \........\  \........\_/........./  /......./  \......\
+      \.......\ /......../  /....../    \.......\  \........\  \........\  \................../  /......./    \......\
+       \................/  /....../      \.......\  \........\  \........\  \................/  /......./      \......\
+        \............../  /....../        \.......\  \........\  \........\  \............../  /......./        \......\
+         \............/  /....../          \.......\  \........\  \........\  \............/  /......./          \......\
+          \........../  /....../            \.......\  \........\  \........\  \........../  /......./            \......\
+                                                                               /........./
+                                                                              /........./
+                                                                             /........./
+                                                                            /........./
+                                                                           /---------/
+                                                    VAIIYA technologies LLC
+                                            Empowering security, one byte at a time.
+
+                                            
+                                    please wait while the program does mandatory checks.
     """)
 #title stuff for new loadin screen 
 
-def loading_bars_into():
+def loading_bars_intro_1():
 
-    title = HTML('<style bg="blue" fg="black">Connecting to the VAIIYA Defender framework....</style>')
-    label = HTML('<ansired>Connecting</ansired>.... ')
+    title = HTML('Connecting to the VAIIYA Defender framework....')
+    label = HTML('')
 
     # loading screen system with prompTK
     with ProgressBar(title=title) as pb:
         for i in pb(range(300), label=label):
             time.sleep(.01)
-        
+    time.sleep(1)
+    
+    print("connection: approved")
+    time.sleep(0.3)
+
+def loading_bars_intro_2():
+
+    title = HTML('Checking root for verification codes....')
+    label = HTML('')
+
+    # loading screen system with prompTK
+    with ProgressBar(title=title) as pb:
+        for i in pb(range(215), label=label):
+            time.sleep(.01)
+    time.sleep(1)
+    
+    print("codes found! checking with system.... approved!")
+    time.sleep(0.2)
+
+def loading_bars_intro_3():
+
+    title = HTML('Sending system logs and debug info for system approval')
+    label = HTML('')
+
+    # loading screen system with prompTK
+    with ProgressBar(title=title) as pb:
+        for i in pb(range(175), label=label):
+            time.sleep(.01)
+    time.sleep(1)
+    
+    print("sending logs.... approved! sending debug... approved! ")
+    time.sleep(0.3)
+    
+    
+    print("All connections approved! opening VAIIYA terminal....")
+    time.sleep(0.5)
 
 # Display main menu
 def main_menu():
@@ -75,7 +129,7 @@ def main_menu():
 |______||______||______||______||______||______||______||______||______||______||______||______||______|
 
                                 Welcome to the VAIIYA terminal!
-            Use this handy dandy terminal for all your duties at VAIIYA cybersecurity corp!  
+            Use this handy dandy terminal for all your duties at VAIIYA Technologies LLC!  
     """)
 def timefetch():
 #time fetch for login
@@ -84,7 +138,7 @@ def timefetch():
 
     print('Welcome VAIIYA trustee! the time is: ',curtime)
     print('and the date is: ',curdate)
-    print("have a wonerful day at VAIIYA cybersecurity corp!")
+    print("have a wonerful day at VAIIYA Technologies LLC!")
 
 # Start the TERMINAL and its commands
 def open_terminal():
@@ -254,7 +308,9 @@ def frostbytes_EE_entered():
 # Main system loop
 def game_loop():
     startup_screen_ASCII()
-    loading_bars_into()
+    loading_bars_intro_1()
+    loading_bars_intro_2()
+    loading_bars_intro_3()
     main_menu()
     timefetch()
     open_terminal()
