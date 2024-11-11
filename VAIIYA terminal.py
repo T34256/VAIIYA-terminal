@@ -144,11 +144,15 @@ def timefetch():
     print("have a wonerful day at VAIIYA Technologies LLC!")
     print("""|""")
 # Start the TERMINAL and its commands
+def terminal_start_message():
+    print(" for a list of commands, please type 'commands' ")
+    print("""|""")
+
+
 def open_terminal():
 
     while True:
-        print(" for a list of commands, please type 'commands' ")
-        print("""|""")
+        
         text = prompt('awaiting command(s)>>> ')
 #put all the usercommands under here please! 
         
@@ -327,6 +331,7 @@ def game_loop():
     loading_bars_intro_3()
     main_menu()
     timefetch()
+    terminal_start_message()
     open_terminal()
     
     while True:
