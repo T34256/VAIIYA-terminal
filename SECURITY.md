@@ -1,6 +1,6 @@
 # Security Policy
 
-I herby T342, (or known as T34256, or Nathan jonson) say that I or my contrubuter(s) / contributee(s) may not put any kind of Securiy, Privacy, Virus and/or Malicious program inside my programs or sub-programs in this code. 
+I herby T342, (or known as T342guy, or Nathan jonson) say that I or my contrubuter(s) / contributee(s) may not put any kind of Securiy, Privacy, Virus and/or Malicious program inside my programs or sub-programs in this code. 
 
 If there is any such issue with malicious programs and/or viruses in this code, I may review and put out a statement immedietly and the respective contrubuter(s) / contributee(s) will be held responsible, 
 
