@@ -200,8 +200,10 @@ def open_terminal():
             print("""C0MM#ND: CNS | {ERROR: UNKNOWN PROGRAM ENTITY}""")
             print("""|""")
             print("""|""")
+            
+            
             #the EXIT command, DO NOT REMOVE!! 
-        if text == 'exit':
+        elif text == 'exit':
             print('exiting the terminal... have a nice day!')
             time.sleep(0.5)
             exit()
