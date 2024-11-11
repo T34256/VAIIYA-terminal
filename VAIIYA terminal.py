@@ -1,3 +1,4 @@
+from ctypes import wintypes
 import time
 import os
 from prompt_toolkit.shortcuts import ProgressBar
@@ -12,18 +13,17 @@ from datetime import datetime
 from prompt_toolkit import print_formatted_text, HTML
 
 #changes the size of the Command promp so it is easyer to read (and that the ASCII doesnt soft wrap)
-#from ctypes import windll, byref
-#from ctypes.wintypes import SMALL_RECT
 
-#STDOUT = -11
+def window_resize_startup():
+#put the CMD reisze code here, this is disabled for the tiem being 
+    CMD = "mode 1000,1000"
+    os.system(CMD)
 
-#hdl = windll.kernel32.GetStdHandle(STDOUT)
-#currently broken without wintypes
-#rect = wintypes.SMALL_RECT(0, 50, 50, 80) # (left, top, right, bottom)
-#windll.kernel32.SetConsoleWindowInfo(hdl, True, byref(rect))
+
 
 
 #NOTE: THERE MAY BE MINOR LINE WRAP IN THE ASCII
+
 # Loading screen with VAIIYA SECURITY ASCII Art
 def startup_screen_ASCII():
     print(r"""
@@ -57,7 +57,7 @@ def startup_screen_ASCII():
                                     please wait while the program does mandatory checks.
     """)
 #title stuff for new loadin screen 
-
+#BEHAVEIOR NOTE: THE PROMPT TK LOADINGBARS CANNOT GO OVER .01 FLOAT FOR SOME REASON! (thanks smashel for the idea, but was unable to make it happen)
 def loading_bars_intro_1():
 
     title = HTML('Connecting to the VAIIYA Defender framework....')
@@ -67,7 +67,7 @@ def loading_bars_intro_1():
     with ProgressBar(title=title) as pb:
         for i in pb(range(300), label=label):
             time.sleep(.01)
-    time.sleep(1)
+    time.sleep(.01)
     
     print("connection: approved")
     time.sleep(0.3)
@@ -138,16 +138,21 @@ def timefetch():
 #time fetch for login
     curtime = datetime.now().strftime('%H:%M:%S') 
     curdate = datetime.now().strftime('%Y-%m-%d')
-
+    print("""|""")
     print('Welcome VAIIYA trustee! the time is: ',curtime)
     print('and the date is: ',curdate)
     print("have a wonerful day at VAIIYA Technologies LLC!")
-
+    print("""|""")
 # Start the TERMINAL and its commands
+def terminal_start_message():
+    print(" for a list of commands, please type 'commands' ")
+    print("""|""")
+
+
 def open_terminal():
 
     while True:
-        print(" for a list of commands, please type 'commands' ")
+        
         text = prompt('awaiting command(s)>>> ')
 #put all the usercommands under here please! 
         
@@ -158,7 +163,7 @@ def open_terminal():
         
         
         if text == 'CNS':
-            print("running secondary program...")
+            print("CNS_VAIIYA_BYPASS_V4.567.EXE EXITCUTING....")
             time.sleep(2)
             CNS_EE_HAKED()
 
@@ -184,14 +189,17 @@ def open_terminal():
 #below are all the non-user commands, DO NOT REMOVE!
             #the COMMANDS directory, DO NOT REMOVE!
         if text == 'commands':
-            print("Commands;")
+            print("""|""")
+            print("""|""")
+            print("Avalible commands: (all may not be listed.)")
+            print("""|""")
+            print("command: walker | The login for CM|walker")
+            print("command: frostbyte | The login for CM|frostbyte")
             print("placeholder here | explanation here")
             print("placeholder here | explanation here")
-            print("placeholder here | explanation here")
-            print("placeholder here | explanation here")
-            print("placeholder here | explanation here")
-            
-            
+            print("""C0MM#ND: CNS | {ERROR: UNKNOWN PROGRAM ENTITY}""")
+            print("""|""")
+            print("""|""")
             #the EXIT command, DO NOT REMOVE!! 
         if text == 'exit':
             print('exiting the terminal... have a nice day!')
@@ -212,30 +220,50 @@ def open_terminal():
 #PUT ALL OTHER NON SUBCOMMAND DEFs BELOW HERE!
 # the CNS EE below this messange
 def CNS_EE_HAKED():
+    #below is the Y/N prompt for CNS, and the following `result` can be split into a bool and set as True or False
     result = yes_no_dialog(
     title='CNS.02.06.01',
     text='dO yOU wAnT ThE tRUTh?').run()
+    #if the `result` has a bool of True, it will run this part of the code. 
     if result == True:
          message_dialog(
     title='CNS.02.06.01',
     text='very well then, we will see you soon enough').run()
-         
-         print(" FATAL ERROR!: VAIIYA defenter has encountered an error! please restart the program to continue!")
-         time.sleep(4)
+         #then after it retuns to the main menu and exits the program.
+         print("VAIIYA DEFENDER ENGINE CRITICAL FAILURE!: THE VAIIYA DEFENDER ENGINE HAS FOUND A BREACH AND WILL NOW FORCE QUIT THE PROGRAM")
+         print("""|""")
+         print("THE PROGRAM WILL SHUTDOWN IN:")
+         time.sleep(1)
+         print("3")
+         time.sleep(1)
+         print("2")
+         time.sleep(1)
+         print("1")
+         time.sleep(1)
          exit()
+    #if the `result` has a bool of False, then it will run this part of code. and again will return to menu and exit the program. 
     if result == False:
          message_dialog(
     title='CNS.02.06.01',
     text='how dissapointing, that you dont want tHe TrutH. we will see you soon enough').run()
-         
-         print(" FATAL ERROR!: VAIIYA defenter has encountered an error! please restart the program to continue!")
-         time.sleep(4)
+         print("VAIIYA DEFENDER ENGINE CRITICAL FAILURE!: THE VAIIYA DEFENDER ENGINE HAS FOUND A BREACH AND WILL NOW FORCE QUIT THE PROGRAM")
+         print("""|""")
+         print("THE PROGRAM WILL SHUTDOWN IN:")
+         time.sleep(1)
+         print("3")
+         time.sleep(1)
+         print("2")
+         time.sleep(1)
+         print("1")
+         time.sleep(1)
          exit()
+#the idea above from smashel! 
 
-
-
-#add passwords here for the logins and name the vars respectivly 
-#hehe youll never get the passwords now! AHAHAHAHAHA! 
+#add passwords here for the logins and name the vars respectivly.
+# 
+#the website for reference to the password system is https://www.geeksforgeeks.org/npm-bcrypt/ 
+# 
+#  
 #walkerpasswrd1
 walkerhash = b'$2b$12$M7LXCClyfsnN9SjibtnEmuLEOlR68H2ovjCBA0zcAIBs2RHBzOnFy'
 #frostEEpswrd1
@@ -244,7 +272,8 @@ frosthash = b'$2b$12$AUur7AKX1aGQurOlmM46Pu0OX9HXqx6UHH9SHiEvrCJM56JvUjYfu'
 
 #walker login here
 def walker_login():
-    
+    #when exiting the prompt with the `<cancel>`, the program will forcequit for some reason. 
+
     #password prompt; 
     userpassword = text = input_dialog(
     title='Walker password input',
@@ -269,7 +298,7 @@ def walker_entered():
 # FROST EE STUFF OVER HERE!
 def frostbyte_login():
                 
-                
+    #there is a bug that cuases the `no command` string to print when exiting.
     print("to exit, type EXIT in the password!")
     userpassword = text = input_dialog(
     title='frostbyte password input',
@@ -286,6 +315,7 @@ def frostbyte_login():
 # 2nd part to the FROST EE                     
 def frostbytes_EE_entered():
     
+    #the following prompts from promptTK are for frost taling about UwU more and more ¯\_(ツ)_/¯
     message_dialog(
     title='VAIIYA Warning systems',
     text='VAIIYA TERMINAL WARNING AWAITING ATTENTION!').run()
@@ -310,24 +340,31 @@ def frostbytes_EE_entered():
 
 # Main system loop
 def game_loop():
+    #window_resize_startup()
     startup_screen_ASCII()
     loading_bars_intro_1()
     loading_bars_intro_2()
     loading_bars_intro_3()
     main_menu()
     timefetch()
+    terminal_start_message()
     open_terminal()
     
     while True:
-
+        #there is no code to run right before startup so there is a `pass` here. 
             pass
 
 # Start the game
 game_loop()
 
 
+#this func is not required for the operation of the program, so it is disabled.
+
+
 #if __name__ == "__main__":
 #        main()
+
+#the notes below are very old. (maybe from v0.0.2 or v0.0.3)
 
 
 
