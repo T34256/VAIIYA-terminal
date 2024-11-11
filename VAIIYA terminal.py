@@ -231,7 +231,15 @@ def CNS_EE_HAKED():
     text='very well then, we will see you soon enough').run()
          #then after it retuns to the main menu and exits the program.
          print("VAIIYA DEFENDER ENGINE CRITICAL FAILURE!: THE VAIIYA DEFENDER ENGINE HAS FOUND A BREACH AND WILL NOW FORCE QUIT THE PROGRAM")
-         time.sleep(4)
+         print("""|""")
+         print("THE PROGRAM WILL SHUTDOWN IN:")
+         time.sleep(1)
+         print("3")
+         time.sleep(1)
+         print("2")
+         time.sleep(1)
+         print("1")
+         time.sleep(1)
          exit()
     #if the `result` has a bool of False, then it will run this part of code. and again will return to menu and exit the program. 
     if result == False:
@@ -239,9 +247,17 @@ def CNS_EE_HAKED():
     title='CNS.02.06.01',
     text='how dissapointing, that you dont want tHe TrutH. we will see you soon enough').run()
          print("VAIIYA DEFENDER ENGINE CRITICAL FAILURE!: THE VAIIYA DEFENDER ENGINE HAS FOUND A BREACH AND WILL NOW FORCE QUIT THE PROGRAM")
-         time.sleep(4)
+         print("""|""")
+         print("THE PROGRAM WILL SHUTDOWN IN:")
+         time.sleep(1)
+         print("3")
+         time.sleep(1)
+         print("2")
+         time.sleep(1)
+         print("1")
+         time.sleep(1)
          exit()
-
+#the idea above from smashel! 
 
 #add passwords here for the logins and name the vars respectivly.
 # 
