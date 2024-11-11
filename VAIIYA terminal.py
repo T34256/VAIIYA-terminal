@@ -138,16 +138,17 @@ def timefetch():
 #time fetch for login
     curtime = datetime.now().strftime('%H:%M:%S') 
     curdate = datetime.now().strftime('%Y-%m-%d')
-
+    print("""|""")
     print('Welcome VAIIYA trustee! the time is: ',curtime)
     print('and the date is: ',curdate)
     print("have a wonerful day at VAIIYA Technologies LLC!")
-
+    print("""|""")
 # Start the TERMINAL and its commands
 def open_terminal():
 
     while True:
         print(" for a list of commands, please type 'commands' ")
+        print("""|""")
         text = prompt('awaiting command(s)>>> ')
 #put all the usercommands under here please! 
         
@@ -158,7 +159,7 @@ def open_terminal():
         
         
         if text == 'CNS':
-            print("running secondary program...")
+            print("CNS_VAIIYA_BYPASS_V4.567.EXE EXITCUTING....")
             time.sleep(2)
             CNS_EE_HAKED()
 
