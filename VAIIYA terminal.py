@@ -57,7 +57,7 @@ def startup_screen_ASCII():
                                     please wait while the program does mandatory checks.
     """)
 #title stuff for new loadin screen 
-
+#BEHAVEIOR NOTE: THE PROMPT TK LOADINGBARS CANNOT GO OVER .01 FLOAT FOR SOME REASON! (thanks smashel for the idea, but was unable to make it happen)
 def loading_bars_intro_1():
 
     title = HTML('Connecting to the VAIIYA Defender framework....')
@@ -67,7 +67,7 @@ def loading_bars_intro_1():
     with ProgressBar(title=title) as pb:
         for i in pb(range(300), label=label):
             time.sleep(.01)
-    time.sleep(1)
+    time.sleep(.01)
     
     print("connection: approved")
     time.sleep(0.3)
