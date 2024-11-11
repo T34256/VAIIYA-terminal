@@ -11,7 +11,7 @@ import time
 import bcrypt
 from datetime import datetime
 from prompt_toolkit import print_formatted_text, HTML
-
+import random
 #changes the size of the Command promp so it is easyer to read (and that the ASCII doesnt soft wrap)
 
 def window_resize_startup():
@@ -82,9 +82,24 @@ def loading_bars_intro_2():
         for i in pb(range(215), label=label):
             time.sleep(.01)
     time.sleep(1)
+    #generates a 5 digit number from 0-9
+    securecodestartup1 = random.randint(0,9)
+    securecodestartup2 = random.randint(0,9)
+    securecodestartup3 = random.randint(0,9)
+    securecodestartup4 = random.randint(0,9) 
+    securecodestartup5 = random.randint(0,9)
+
+    print('Codes found! code is:')
+    time.sleep(1.5)
+    #prints that generated number
+    print(securecodestartup1,securecodestartup2,securecodestartup3,securecodestartup4,securecodestartup5)
+    print("checking.... system expected code is:")
+    time.sleep(1.5)
+    print(securecodestartup1,securecodestartup2,securecodestartup3,securecodestartup4,securecodestartup5)
+    time.sleep(2)
+    print("code approved! moving on...")
+    #a cool lil thing for a secure startup! 
     
-    print("codes found! checking with system.... approved!")
-    time.sleep(0.2)
 
 def loading_bars_intro_3():
 
