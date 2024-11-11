@@ -143,43 +143,72 @@ def timefetch():
     print('and the date is: ',curdate)
     print("have a wonerful day at VAIIYA Technologies LLC!")
     print("""|""")
-# Start the TERMINAL and its commands
+
+#this is here so that this doesnt dupe every time the commandline reprints. it now only happens once.
 def terminal_start_message():
     print(" for a list of commands, please type 'commands' ")
     print("""|""")
 
+#TERMINAL BEHAVIOR NOTES! make sure to use `elif` instead of `if`. this will prevent the error string from printing if we retun from the EEs or logins.
+#
+#
+#notes here^^^
 
+
+#Starts the TERMINAL and its commands
 def open_terminal():
 
     while True:
         
         text = prompt('awaiting command(s)>>> ')
 #put all the usercommands under here please! 
-        
-
-
-        
-        
-        
-        
-        if text == 'CNS':
-            print("CNS_VAIIYA_BYPASS_V4.567.EXE EXITCUTING....")
-            time.sleep(2)
-            CNS_EE_HAKED()
-
+        #this is the FIRST `if`, replace and all new should be `elif`.
         if text == 't342':
             print('heyy thanks for sayin somthin!')
             continue
-        
+#this is BELOW the first command. put `elif` on all new commands.
 
-        if text == 'walker':
+        #the credits for the game! 
+        elif text == 'credits':
+            print("""|""")
+            print("""|""")
+            print("The credits of VAIIYA terminal!")
+            print("""|""")
+            print("Owner: T342, T342guy or Nathan jonhson.")
+            print("""|""")
+            print("contributors: ")
+            print("Smashel from discord.")
+            print("Riskit from discord.")
+            print("""|""")
+            print("""|""")
+            print("and thats all for now! have fun, stay safe and secure! VAIIYA trustees and THE FINALS contestants!")
+            print("""|""")
+            
+
+            #the link given will NEVER EXPIRE
+        elif text == 'discord':
+            print("""|""")
+            print(" the invite link to The VAIIYA Hub/VAIIYA terminal dev: https://discord.gg/Qt5Je9sFE5 ")
+            print("""|""")
+            
+
+
+        elif text == 'CNS':
+            print("CNS_VAIIYA_BYPASS_V4.567.EXE EXITCUTING....")
+            time.sleep(2)
+            CNS_EE_HAKED()
+        #this just prints the one line and starts the CMDline again.
+        
+        
+        #walkers login, requires password. this will print the following, stop for 3 secs and then runs the `walker_login()`.
+        elif text == 'walker':
             print("welcome walker to your login! please wait while your coffee brews.......")
             time.sleep(3)
             walker_login()
 
-        #BUG: the error "no command" will reply when exiting the FROST EE!
+        #the `no-command bug has been resolved.` 
         # FROST EE WIP!! 
-        if text == 'frostbyte':
+        elif text == 'frostbyte':
             print("welcome frostbyte to your login! please wait while i startup the supercomputer and freeze these bytes!....")
             time.sleep(3)
             #enters the frostbyte EE
@@ -188,19 +217,22 @@ def open_terminal():
 
 #below are all the non-user commands, DO NOT REMOVE!
             #the COMMANDS directory, DO NOT REMOVE!
-        if text == 'commands':
+        elif text == 'commands':
             print("""|""")
             print("""|""")
             print("Avalible commands: (all may not be listed.)")
             print("""|""")
-            print("command: walker | The login for CM|walker")
-            print("command: frostbyte | The login for CM|frostbyte")
+            print("command; walker | The login for CM|walker")
+            print("command; frostbyte | The login for CM|frostbyte")
             print("placeholder here | explanation here")
             print("placeholder here | explanation here")
-            print("""C0MM#ND: CNS | {ERROR: UNKNOWN PROGRAM ENTITY}""")
+            print("""C0MM#N0D;;.."' CNS | {ERROR: UNKNOWN PROGRAM ENTITY}""")
             print("""|""")
             print("""|""")
-            
+            print("""command; credits | the credits to the game! (^///^) """)
+            print("command; discord | get a invite link to The VAIIYA hub!, a hang-about and VAIIYA-terminal server!")
+            print("""|""")
+            print("""|""")
             
             #the EXIT command, DO NOT REMOVE!! 
         elif text == 'exit':
