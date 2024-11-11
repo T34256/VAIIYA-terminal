@@ -19,13 +19,48 @@ def window_resize_startup():
     CMD = "mode 1000,1000"
     os.system(CMD)
 
+#this idea was requested by Smashel on issue #30. 
+#defualt value is 1-5650
+#if it somehow gets that number the ascii will "corrupt" and use an alt
+def startup_screen_ascii_roll():
+    corrupted_ascii_roll = random.randint(1,5650)
+    #normal value for this var is 3479
+    if corrupted_ascii_roll == 3479:
+        corrupted_ascii_startup_screen()
+
+    else:
+        norm_startup_screen_ASCII()
+
+#if the number is rolled correctly, then this ASCII will play instead of the norm. 
+def corrupted_ascii_startup_screen():
+    print(r"""
+
+ERR! NORM ASCII STARTUP FAILURE, USING ALT ASCII. APPLICATION IS STILL USEABLE.          
+                         _____   _____
+                          \____\  \____\
+_____      _____  ______  _____  _____  _____      _____  ______
+\    \    /    / /      \ \    \ \    \ \    \    /    / /      \
+ \    \  /    / /        \ \    \ \    \ \    \  /    / /        \
+  \    \/    / /    /\    \ \    \ \    \ \    \/    / /    /\    \
+   \        / /    /  \    \ \    \ \    \ \        / /    /  \    \
+    \______/ /____/    \____\ \____\ \____\ \      / /____/    \____\
+                                            /     /
+                                           /     /
+                                          /_____/
+                    VAIIYA technologies LLC
+            Empowering security, one byte at a time.
+
+                                            
+        please wait while the program does mandatory checks.
+
+""")
 
 
 
 #NOTE: THERE MAY BE MINOR LINE WRAP IN THE ASCII
 
 # Loading screen with VAIIYA SECURITY ASCII Art
-def startup_screen_ASCII():
+def norm_startup_screen_ASCII():
     print(r"""
 
  
@@ -390,7 +425,7 @@ def frostbytes_EE_entered():
 # Main system loop
 def game_loop():
     #window_resize_startup()
-    startup_screen_ASCII()
+    startup_screen_ascii_roll()
     loading_bars_intro_1()
     loading_bars_intro_2()
     loading_bars_intro_3()
