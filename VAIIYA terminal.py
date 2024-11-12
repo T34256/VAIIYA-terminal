@@ -162,22 +162,22 @@ def main_menu():
                                               \|||||||||\ \::::::::::\
                                                \|||||||||\ \::::::::::\
                                                 \|||||||||\ \::::::::::\
-\-------\             /--------/  /-------\  \--------\  \--------\  \--------\           /---------/  /-------\
- \.......\           /......../  /.........\  \........\  \........\  \........\         /........./  /.........\
-  \.......\         /......../  /...........\  \........\  \........\  \........\       /........./  /...........\
-   \.......\       /......../  /.............\  \........\  \........\  \........\     /........./  /.............\
-    \.......\     /......../  /......__.......\  \........\  \........\  \........\   /........./  /...............\
-     \.......\   /......../  /....../  \.......\  \........\  \........\  \........\_/........./  /......./  \......\
-      \.......\ /......../  /....../    \.......\  \........\  \........\  \................../  /......./    \......\
-       \................/  /....../      \.......\  \........\  \........\  \................/  /......./      \......\
-        \............../  /....../        \.......\  \........\  \........\  \............../  /......./        \......\
-         \............/  /....../          \.......\  \........\  \........\  \............/  /......./          \......\
-          \........../  /....../            \.......\  \........\  \........\  \........../  /......./            \......\
-                                                                               /........./
+\-------\             /--------/  /------\  \--------\  \--------\  \--------\           /---------/  /-------\
+ \.......\           /......../  /........\  \........\  \........\  \........\         /........./  /.........\
+  \.......\         /......../  /..........\  \........\  \........\  \........\       /........./  /...........\
+   \.......\       /......../  /............\  \........\  \........\  \........\     /........./  /.............\
+    \.......\     /......../  /......__......\  \........\  \........\  \........\   /........./  /...............\
+     \.......\   /......../  /....../  \......\  \........\  \........\  \........\_/........./  /......./  \......\
+      \.......\ /......../  /....../    \......\  \........\  \........\  \................../  /......./    \......\
+       \................/  /....../      \......\  \........\  \........\  \................/  /......./      \......\
+        \............../  /....../        \......\  \........\  \........\  \............../  /......./        \......\
+         \............/  /....../          \......\  \........\  \........\  \............/  /......./          \......\
+          \........../  /....../            \......\  \........\  \........\  \........../  /......./            \......\
                                                                               /........./
                                                                              /........./
                                                                             /........./
-                                                                           /---------/
+                                                                           /........./
+                                                                          /---------/
                                                     VAIIYA technologies LLC
                                             Empowering security, one byte at a time.
 
@@ -191,7 +191,7 @@ def timefetch():
     print("""|""")
     print('Welcome VAIIYA trustee! the time is: ',curtime)
     print('and the date is: ',curdate)
-    print("have a wonerful day at VAIIYA Technologies LLC!")
+    print("have a wonderful day at VAIIYA Technologies LLC!")
     print("""|""")
 
 #this is here so that this doesnt dupe every time the commandline reprints. it now only happens once.
@@ -224,7 +224,7 @@ def open_terminal():
             print("""|""")
             print("The credits of VAIIYA terminal!")
             print("""|""")
-            print("Owner: T342, T342guy or Nathan jonhson.")
+            print("Owner: T342, T342guy or Nathan johnson.")
             print("""|""")
             print("contributors: ")
             print("Smashel from discord.")
@@ -238,7 +238,7 @@ def open_terminal():
             #the link given will NEVER EXPIRE
         elif text == 'discord':
             print("""|""")
-            print(" the invite link to The VAIIYA Hub/VAIIYA terminal dev: https://discord.gg/Qt5Je9sFE5 ")
+            print(" the invite link to The VAIIYA Hub and VAIIYA Terminal news!: https://discord.gg/Qt5Je9sFE5 ")
             print("""|""")
             
 
@@ -247,7 +247,6 @@ def open_terminal():
             print("CNS_VAIIYA_BYPASS_V4.567.EXE EXITCUTING....")
             time.sleep(2)
             CNS_EE_HAKED()
-        #this just prints the one line and starts the CMDline again.
         
         
         #walkers login, requires password. this will print the following, stop for 3 secs and then runs the `walker_login()`.
@@ -301,7 +300,7 @@ def open_terminal():
 
 
 
-#PUT ALL OTHER NON SUBCOMMAND DEFs BELOW HERE!
+#PUT ALL FUNC DEFS BELOW HERE! 
 # the CNS EE below this messange
 def CNS_EE_HAKED():
     #below is the Y/N prompt for CNS, and the following `result` can be split into a bool and set as True or False
@@ -345,9 +344,7 @@ def CNS_EE_HAKED():
 
 #add passwords here for the logins and name the vars respectivly.
 # 
-#the website for reference to the password system is https://www.geeksforgeeks.org/npm-bcrypt/ 
-# 
-#  
+#the website for reference to the password system is https://www.geeksforgeeks.org/npm-bcrypt/   
 #walkerpasswrd1
 walkerhash = b'$2b$12$M7LXCClyfsnN9SjibtnEmuLEOlR68H2ovjCBA0zcAIBs2RHBzOnFy'
 #frostEEpswrd1
