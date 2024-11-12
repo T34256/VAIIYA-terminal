@@ -288,7 +288,7 @@ def open_terminal():
         elif text == 'exit':
             print('exiting the terminal... have a nice day!')
             time.sleep(0.5)
-            exit()
+            quit()
         
         #error response
         else:
@@ -324,7 +324,7 @@ def CNS_EE_HAKED():
          time.sleep(1)
          print("1")
          time.sleep(1)
-         exit()
+         quit()
     #if the `result` has a bool of False, then it will run this part of code. and again will return to menu and exit the program. 
     if result == False:
          message_dialog(
@@ -340,7 +340,7 @@ def CNS_EE_HAKED():
          time.sleep(1)
          print("1")
          time.sleep(1)
-         exit()
+         quit()
 #the idea above from smashel! 
 
 #add passwords here for the logins and name the vars respectivly.
