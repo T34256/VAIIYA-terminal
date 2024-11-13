@@ -251,7 +251,7 @@ def open_terminal():
             
 
         #THIS COMMAND IS A DEBUG!!!! DO NOT ACTIVE FOR REALEASE! 
-        elif text == 'VRCL_DEBUG':
+        #elif text == 'VRCL_DEBUG':
             V_R_C_L_COMMAND_PANEL()
 
 
