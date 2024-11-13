@@ -434,6 +434,26 @@ def frostbytes_EE_entered():
     if text == 'exit':
         return
 #END OF FROST EE CODE, 
+def CM_COMMAND_PANEL():
+    while True: 
+        V_R_C_L_TEXT = prompt('V.R.C.L. awaiting command(s)>>>> ')
+
+        if  V_R_C_L_TEXT == 'test':
+            print("yes I do beleve it works! ")
+
+        elif V_R_C_L_TEXT == 'walker':
+            print("VAIIYA RESTRICTED COMMAND LINE (V.R.C.L.) FINGING INQUIRY....")
+            time.sleep(1)
+            print("serching database... ")
+            time.sleep(1)
+            print("Record found!")
+            print("|")
+            print("citizen record; Walker  user_traits=enjoys_'dinos' drinks_accsessive_amounts_of_coffee ")
+            print("username=walkercm")
+            print("user_traits=enjoys_'dinos' drinks_accsessive_amounts_of_coffee")
+            print("health_record_status=True current_records=17 record_severety=low highest_alert=heart_attack_of_coffee")
+            print("end of file.")
+            print("|")
 
 
 
