@@ -184,10 +184,25 @@ def main_menu():
                                             
                         Welcome to the Terminal! all checks are complete. you can continue on your work.
     """)
+def message_of_the_day(): #or per boot 
+    print("|")
+    print("The message of the day is: ")
+    print("|") 
+    #picks a random number, each value (depending on how many messages) will have a number. 
+    MOTD = random.randint(1,3)
+
+    if MOTD == 1: 
+        print("john? what the hell are you doing over there? GET BACK TO WO- ##TRANSSCRIPT ENDED CODE 87##")
+    elif MOTD == 2: 
+        print("Remember: CNS is our greatest enemy! WE CANNOT LET THEM INTO THE SYSTE- ## LOG SYSTEM FAILURE CODE #9)*^9 ##")
+    elif MOTD == 3:
+        print("SYSTEM AUTOLOG OVRRIDE: SERVERS #108,#196,#102,#156,#342 HAVE BEEN ISOLATED. DO NOT CHANGE THIS ORDER.")
+
 def timefetch():
 #time fetch for login
     curtime = datetime.now().strftime('%H:%M:%S') 
     curdate = datetime.now().strftime('%Y-%m-%d')
+    print("|")
     print("""|""")
     print('Welcome VAIIYA trustee! the time is: ',curtime)
     print('and the date is: ',curdate)
@@ -430,6 +445,7 @@ def game_loop():
     loading_bars_intro_2()
     loading_bars_intro_3()
     main_menu()
+    message_of_the_day()
     timefetch()
     terminal_start_message()
     open_terminal()
