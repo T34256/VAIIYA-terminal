@@ -23,7 +23,11 @@ also as a side note: this will be a very good experemantation for password prote
 
 all images were uploaded durring v7 or 0.0.7, things are subject to change! 
 
-## To install
+
+
+# install dependencies 
+
+run this command in the file of the source or requirements.txt file.
 
 ```
 pip install -r requirements.txt
