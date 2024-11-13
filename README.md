@@ -12,24 +12,13 @@ also as a side note: this will be a very good experemantation for password prote
 ( ps; rob if you read this, can i have the offical VAIIYA ASCII art for my code plz 🙏🥹 ) 
 
 # The game
- for "virus" suspisions;
- 
-**BEFORE YOU ASK IF IT IS VIRUS PLEASE LOOK IN SOURCE CODE!**
-
-*this entire game is made in python v3.11 so thats why the files say .py if you ask if virus*
-
-*and the EXE files are made with the py2exe-gui tool (look it up)*
+**IMPRORTANT NOTE: THE VAIIYA TERMINAL EXE's HAVE FLAGGED WINDOWS SMART APP CONTROLL DUE TO THE EXE's NOT BEING SIGNED. YOU CAN SAFELY IGNORE THESE WARNINGS.**
 
 
-![image](https://github.com/user-attachments/assets/af8ad769-c6f0-4ebb-8c6a-2a9871b3ed95)
+![image](https://github.com/user-attachments/assets/c8e9ee6f-d77e-455a-9e79-b1ce7b03953d)
 
 
-(image made durring 0.0.4 things are subject to change!)
 
+![image](https://github.com/user-attachments/assets/47f53723-933e-44ff-b5b4-26eec0598bc9)
 
-![image](https://github.com/user-attachments/assets/b5a2b82d-28c3-47fc-9267-80787657cd89)
-
-
-(image made durring 0.0.4 things are subject to change!)
-
-last edited: 10/10/2024 mm/dd/yyyy
+all images were uploaded durring v7 or 0.0.7, things are subject to change! 
