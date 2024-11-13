@@ -283,6 +283,9 @@ def open_terminal():
             print("""|""")
             print("""|""")
             
+        elif text == '':
+            continue
+
             #the EXIT command, DO NOT REMOVE!! 
         elif text == 'exit':
             print('exiting the terminal... have a nice day!')
