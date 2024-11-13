@@ -22,3 +22,9 @@ also as a side note: this will be a very good experemantation for password prote
 ![image](https://github.com/user-attachments/assets/47f53723-933e-44ff-b5b4-26eec0598bc9)
 
 all images were uploaded durring v7 or 0.0.7, things are subject to change! 
+
+## To install
+
+```
+pip install -r requirements.txt
+```
