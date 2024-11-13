@@ -250,6 +250,12 @@ def open_terminal():
             print("""|""")
             
 
+        #THIS COMMAND IS A DEBUG!!!! DO NOT ACTIVE FOR REALEASE! 
+        elif text == 'VRCL_DEBUG':
+            V_R_C_L_COMMAND_PANEL()
+
+
+
             #the link given will NEVER EXPIRE
         elif text == 'discord':
             print("""|""")
@@ -434,7 +440,7 @@ def frostbytes_EE_entered():
     if text == 'exit':
         return
 #END OF FROST EE CODE, 
-def CM_COMMAND_PANEL():
+def V_R_C_L_COMMAND_PANEL():
     while True: 
         V_R_C_L_TEXT = prompt('V.R.C.L. awaiting command(s)>>>> ')
 
