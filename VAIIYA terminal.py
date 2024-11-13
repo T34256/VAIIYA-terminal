@@ -215,7 +215,7 @@ def terminal_start_message():
     print("""|""")
 
 #TERMINAL BEHAVIOR NOTES! make sure to use `elif` instead of `if`. this will prevent the error string from printing if we retun from the EEs or logins.
-#
+#ANOTHER NOTE: exit() AND quit() COUNT AS DEBUGGING, SO A TRACKBACK WILL CALL. USE `raise SystemExit` FROM NOW ON!
 #
 #notes here^^^
 
@@ -305,7 +305,7 @@ def open_terminal():
         elif text == 'exit':
             print('exiting the terminal... have a nice day!')
             time.sleep(0.5)
-            quit()
+            raise SystemExit 
         
         #error response
         else:
@@ -341,7 +341,7 @@ def CNS_EE_HAKED():
          time.sleep(1)
          print("1")
          time.sleep(1)
-         quit()
+         raise SystemExit
     #if the `result` has a bool of False, then it will run this part of code. and again will return to menu and exit the program. 
     if result == False:
          message_dialog(
@@ -357,7 +357,7 @@ def CNS_EE_HAKED():
          time.sleep(1)
          print("1")
          time.sleep(1)
-         quit()
+         raise SystemExit
 #the idea above from smashel! 
 
 #add passwords here for the logins and name the vars respectivly.
