@@ -304,6 +304,9 @@ def open_terminal():
                     print("WALKER")
                     print("FROST")
                 
+                elif DEBUG_PR == 'exit' or 'quit':
+                    return
+
                 else:
                     print("use COMMANDS if you forgot")
             
@@ -326,12 +329,12 @@ def open_terminal():
             print("command; discord | get a invite link to The VAIIYA hub!, a hang-about and VAIIYA-terminal server!")
             print("""|""")
             print("""|""")
-            
+        #this solves the space command issue. leave blank    
         elif text == '':
             continue
 
             #the EXIT command, DO NOT REMOVE!! 
-        elif text == 'exit':
+        elif text == 'exit' or 'quit':
             print('exiting the terminal... have a nice day!')
             time.sleep(0.5)
             raise SystemExit 
@@ -508,7 +511,9 @@ def V_R_C_L_COMMAND_PANEL():
 
 
 
-
+        elif V_R_C_L_TEXT == 'exit' or 'quit':
+            return
+        
         else: 
             print("|")
             print("V.R.C.L. ERROR; RECORD DOES NOT EXIST. CHECK SPELLING, CAPS, OR OTHER.")
