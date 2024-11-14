@@ -392,6 +392,8 @@ def CNS_EE_HAKED():
          raise SystemExit
 #the idea above from smashel! 
 
+
+
 #add passwords here for the logins and name the vars respectivly.
 # 
 #the website for reference to the password system is https://www.geeksforgeeks.org/npm-bcrypt/   
@@ -418,6 +420,7 @@ def walker_login():
           walker_entered()
 #end of walker password varifi 
 
+
 def walker_entered():
     print("welcome walker! here currnently there is nothing, i have no idea what to put here for you guys.")
     print("but id assume you are familiar with github so if you have an idea i would more than glad take a look and try to implement it! ")
@@ -425,6 +428,8 @@ def walker_entered():
     if text == 'exit':
         return
         #end of walker login
+
+
 
 # FROST EE STUFF OVER HERE!
 def frostbyte_login():
@@ -443,6 +448,9 @@ def frostbyte_login():
           frostbytes_EE_entered()
     if text == 'exit':
         return
+
+
+
 # 2nd part to the FROST EE                     
 def frostbytes_EE_entered():
     
@@ -466,6 +474,9 @@ def frostbytes_EE_entered():
     if text == 'exit':
         return
 #END OF FROST EE CODE, 
+
+
+
 #THE VRCL startup with the welcome message. this is so the welcome message clone does not happen again. 
 def VRCL_startup():
     VRCL_welcome_message()
@@ -518,6 +529,9 @@ def V_R_C_L_COMMAND_PANEL():
         else: 
             print("|")
             print("V.R.C.L. ERROR; RECORD DOES NOT EXIST. CHECK SPELLING, CAPS, OR OTHER.")
+
+
+
 
 
 # Main system loop
