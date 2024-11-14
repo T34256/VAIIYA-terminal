@@ -290,7 +290,7 @@ def open_terminal():
                 DEBUG_PR = prompt('DEBUG COMMANDLINE >>>')
 
                 if DEBUG_PR == 'VRCL':
-                    V_R_C_L_COMMAND_PANEL()
+                    VRCL_startup()
 
                 elif DEBUG_PR == 'WALKER':
                     walker_entered()
@@ -456,7 +456,18 @@ def frostbytes_EE_entered():
     if text == 'exit':
         return
 #END OF FROST EE CODE, 
+def VRCL_startup():
+    VRCL_welcome_message()
+    V_R_C_L_COMMAND_PANEL()
+
+def VRCL_welcome_message():
+    print("Welcome VAIIYA trustee or other high authorization. ")
+    print("|")
+    print("This is the V.R.C.L. Terminal. where some (not all) user records are found. use keywords to acsess records")
+
 def V_R_C_L_COMMAND_PANEL():
+    
+    
     while True: 
         V_R_C_L_TEXT = prompt('V.R.C.L. awaiting command(s)>>>> ')
 
@@ -464,6 +475,7 @@ def V_R_C_L_COMMAND_PANEL():
             print("yes I do beleve it works! ")
 
         elif V_R_C_L_TEXT == 'walker':
+            print("|")
             print("VAIIYA RESTRICTED COMMAND LINE (V.R.C.L.) FINGING INQUIRY....")
             time.sleep(1)
             print("serching database... ")
@@ -477,6 +489,14 @@ def V_R_C_L_COMMAND_PANEL():
             print("end of file.")
             print("|")
 
+
+
+
+
+
+        else: 
+            print("|")
+            print("V.R.C.L. ERROR; RECORD DOES NOT EXIST. CHECK SPELLING, CAPS, OR OTHER.")
 
 
 # Main system loop
