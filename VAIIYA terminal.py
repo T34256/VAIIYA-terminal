@@ -466,6 +466,7 @@ def frostbytes_EE_entered():
     if text == 'exit':
         return
 #END OF FROST EE CODE, 
+#THE VRCL startup with the welcome message. this is so the welcome message clone does not happen again. 
 def VRCL_startup():
     VRCL_welcome_message()
     V_R_C_L_COMMAND_PANEL()
