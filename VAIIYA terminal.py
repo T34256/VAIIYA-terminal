@@ -285,7 +285,7 @@ def open_terminal():
 
 
         #BELOW IS THE DEBUG COMMANDLINE, DO NOT LEAVE ON FOR RELEASE!     
-        elif text == 'DEBUG':
+        #elif text == 'DEBUG':
             while True: 
                 DEBUG_PR = prompt('DEBUG COMMANDLINE >>>')
 
