@@ -303,6 +303,9 @@ def open_terminal():
                     print("VRCL")
                     print("WALKER")
                     print("FROST")
+                
+                else:
+                    print("use COMMANDS if you forgot")
             
             
             
