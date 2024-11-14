@@ -298,7 +298,11 @@ def open_terminal():
                 elif DEBUG_PR == 'FROST':
                     frostbytes_EE_entered()
 
-            
+                elif DEBUG_PR == 'COMMANDS':
+                    print("commands:")
+                    print("VRCL")
+                    print("WALKER")
+                    print("FROST")
             
             
             
