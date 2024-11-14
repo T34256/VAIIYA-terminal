@@ -463,16 +463,24 @@ def VRCL_startup():
 def VRCL_welcome_message():
     print("Welcome VAIIYA trustee or other high authorization. ")
     print("|")
-    print("This is the V.R.C.L. Terminal. where some (not all) user records are found. use keywords to acsess records")
-
+    print("This is the V.AIIYA R.ESTRICTED C.OMMAND L.INE Terminal. where some (not all) user records are found. use keywords to acsess records")
+    print("use command 'records' for avalable records ")
 def V_R_C_L_COMMAND_PANEL():
     
-    
-    while True: 
+    while True:
+        print("|") 
         V_R_C_L_TEXT = prompt('V.R.C.L. awaiting command(s)>>>> ')
 
         if  V_R_C_L_TEXT == 'test':
             print("yes I do beleve it works! ")
+        
+
+        elif V_R_C_L_TEXT == 'records':
+            print("|")
+            print("record; walker")
+            print("placeholder")
+
+
 
         elif V_R_C_L_TEXT == 'walker':
             print("|")
