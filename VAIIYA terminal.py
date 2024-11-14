@@ -540,32 +540,6 @@ def game_loop():
 # Start the game
 game_loop()
 
-
 #this func is not required for the operation of the program, so it is disabled.
-
-
 #if __name__ == "__main__":
 #        main()
-
-#the notes below are very old. (maybe from v0.0.2 or v0.0.3)
-
-
-
-#IMPORTANT NOTES AND BEHAVEIORS IN CODE!!!! 
-# 1. NEVER put a IF staement with a OR command!! or any other command will do the same action!! including undefined ones!! 
-# the way to get arount this is use a ELIF command, than the OR statement will not reapet undefined or incorrect strings!!! - T342 the owner if you were snooping >:3 
-
-#update above: you cannot use workaround in main menu!! i have no idea why! you will just need to make a dual command instead. 
-
-# 2. UwU dont you say ANYTHING ABOUT THAT - NOT T342, DONT TELL FROST PLEASESSSSSSSSSSSSSSSSSSSSSS
-
-
-#found new menu system that need the EXIT command:
-#  
-#command = input("type EXIT to go to main menu>>> ").lower()
-#    while True:
-        #if command == "exit":
-            #break
-# use that at the end of a text viewscreen or file viewer - T342 you extra snoop >:3 
-
-
