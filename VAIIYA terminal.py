@@ -250,11 +250,6 @@ def open_terminal():
             print("""|""")
             
 
-        #THIS COMMAND IS A DEBUG!!!! DO NOT ACTIVE FOR REALEASE! 
-        #elif text == 'VRCL_DEBUG':
-            V_R_C_L_COMMAND_PANEL()
-
-
 
             #the link given will NEVER EXPIRE
         elif text == 'discord':
@@ -286,6 +281,27 @@ def open_terminal():
 
 
 #below are all the non-user commands, DO NOT REMOVE!
+
+
+
+        #BELOW IS THE DEBUG COMMANDLINE, DO NOT LEAVE ON FOR RELEASE!     
+        elif text == 'DEBUG':
+            while True: 
+                DEBUG_PR = prompt('DEBUG COMMANDLINE >>>')
+
+                if DEBUG_PR == 'VRCL':
+                    V_R_C_L_COMMAND_PANEL()
+
+                elif DEBUG_PR == 'WALKER':
+                    walker_entered()
+
+                elif DEBUG_PR == 'FROST':
+                    frostbytes_EE_entered()
+
+            
+            
+            
+            
             #the COMMANDS directory, DO NOT REMOVE!
         elif text == 'commands':
             print("""|""")
