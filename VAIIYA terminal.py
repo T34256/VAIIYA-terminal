@@ -304,7 +304,7 @@ def open_terminal():
                     print("WALKER")
                     print("FROST")
                 
-                elif DEBUG_PR == 'exit' or 'quit':
+                elif DEBUG_PR == 'exit':
                     return
 
                 else:
@@ -334,7 +334,7 @@ def open_terminal():
             continue
 
             #the EXIT command, DO NOT REMOVE!! 
-        elif text == 'exit' or 'quit':
+        elif text == 'exit':
             print('exiting the terminal... have a nice day!')
             time.sleep(0.5)
             raise SystemExit 
@@ -512,7 +512,7 @@ def V_R_C_L_COMMAND_PANEL():
 
 
 
-        elif V_R_C_L_TEXT == 'exit' or 'quit':
+        elif V_R_C_L_TEXT == 'exit':
             return
         
         else: 
