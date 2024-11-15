@@ -252,7 +252,7 @@ def open_terminal():
         elif text == 'version':
             print("|")
             print("VAIIYA Terminal Engine version 23.58-B ")
-            print("detected operating system: IBM 5150 VAIIYA secure system fitted.")
+            print("detected operating device: IBM 5150 VAIIYA secure system fitted.")
             print("OS system detected: MuCoDOS V27.592 private")
             print("VAIIYA Terminal realease V10-PRE")
             print("|")
@@ -535,7 +535,7 @@ def V_R_C_L_COMMAND_PANEL():
         else: 
             print("|")
             print("V.R.C.L. ERROR; RECORD DOES NOT EXIST. CHECK SPELLING, CAPS, OR OTHER.")
-
+#END OF THE VRCL COMMAND SYSTEM
 
 
 
