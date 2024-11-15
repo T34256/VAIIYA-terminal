@@ -345,6 +345,7 @@ def DEBUG_CMD():
             print("VRCL")
             print("WALKER")
             print("FROST")
+            print("EXIT")
                 
         elif text == 'EXIT':
             break
