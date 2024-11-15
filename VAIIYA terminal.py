@@ -15,10 +15,9 @@ import random
 import tkinter.messagebox 
 #changes the size of the Command promp so it is easyer to read (and that the ASCII doesnt soft wrap)
 
-def window_resize_startup():
-#put the CMD reisze code here, this is disabled for the tiem being 
-    CMD = "mode 1000,1000"
-    os.system(CMD)
+def check_for_update_plz():
+    tkinter.messagebox.showinfo(title='Check for updates :3', message='hey! check to see if you are using the latest version! :3')
+
 
 #this idea was requested by Smashel on issue #30. 
 #defualt value is 1-5650
@@ -537,7 +536,7 @@ def V_R_C_L_COMMAND_PANEL():
 
 # Main system loop
 def game_loop():
-    #window_resize_startup()
+    check_for_update_plz()
     startup_screen_ascii_roll()
     loading_bars_intro_1()
     loading_bars_intro_2()
