@@ -17,7 +17,7 @@ import tkinter.messagebox
 
 def check_for_update_plz():
     tkinter.messagebox.showinfo(title='Check for updates :3', message='hey! check to see if you are using the latest version! :3')
-
+    
 
 #this idea was requested by Smashel on issue #30. 
 #defualt value is 1-5650
@@ -249,8 +249,13 @@ def open_terminal():
             print("and thats all for now! have fun, stay safe and secure! VAIIYA trustees and THE FINALS contestants!")
             print("""|""")
             
-
-
+        elif text == 'version':
+            print("|")
+            print("VAIIYA Terminal Engine version 23.58-B ")
+            print("detected operating system: IBM 5150 VAIIYA secure system fitted.")
+            print("OS system detected: MuCoDOS V27.592 private")
+            print("VAIIYA Terminal realease V10-PRE")
+            print("|")
             #the link given will NEVER EXPIRE
         elif text == 'discord':
             print("""|""")
