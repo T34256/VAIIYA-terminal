@@ -12,6 +12,7 @@ import bcrypt
 from datetime import datetime
 from prompt_toolkit import print_formatted_text, HTML
 import random
+import tkinter.messagebox 
 #changes the size of the Command promp so it is easyer to read (and that the ASCII doesnt soft wrap)
 
 def window_resize_startup():
