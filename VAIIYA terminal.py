@@ -290,33 +290,10 @@ def open_terminal():
 
 
         #BELOW IS THE DEBUG COMMANDLINE, DO NOT LEAVE ON FOR RELEASE!     
-        #elif text == 'DEBUG':
-            while True: 
-                DEBUG_PR = prompt('DEBUG COMMANDLINE >>>')
+        elif text == 'DEBUG':
+            DEBUG_CMD()
 
-                if DEBUG_PR == 'VRCL':
-                    VRCL_startup()
 
-                elif DEBUG_PR == 'WALKER':
-                    walker_entered()
-
-                elif DEBUG_PR == 'FROST':
-                    frostbytes_EE_entered()
-
-                elif DEBUG_PR == 'COMMANDS':
-                    print("commands:")
-                    print("VRCL")
-                    print("WALKER")
-                    print("FROST")
-                
-                elif DEBUG_PR == 'exit':
-                    return
-
-                else:
-                    print("use COMMANDS if you forgot")
-            
-            
-            
             #the COMMANDS directory, DO NOT REMOVE!
         elif text == 'commands':
             print("""|""")
@@ -349,8 +326,31 @@ def open_terminal():
             print("uhh, hmm, i dont think thats a command friend! type 'commands' for a list of commands!")
 
 # PLEASE PUT ALL 2ND DEF(S) BELOW THIS NOTE! 
+def DEBUG_CMD():
+    
+    while True:
+        text = prompt('DEBUG COMMANDLINE >>> ')        
 
+        if text == 'VRCL':
+            VRCL_startup()
 
+        elif text == 'WALKER':
+            walker_entered()
+
+        elif text == 'FROST':
+            frostbytes_EE_entered()
+
+        elif text == 'COMMANDS':
+            print("commands:")
+            print("VRCL")
+            print("WALKER")
+            print("FROST")
+                
+        elif text == 'exit':
+            break
+
+        else:
+            print("use COMMANDS if you forgot")
 
 
 
