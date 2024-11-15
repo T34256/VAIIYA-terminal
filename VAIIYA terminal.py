@@ -482,6 +482,34 @@ def frostbytes_EE_entered():
 #END OF FROST EE CODE, 
 
 
+#USER TEMPLATE HERE
+            #print("|")
+            #print("VAIIYA RESTRICTED COMMAND LINE (V.R.C.L.) FINGING INQUIRY....")
+            #time.sleep(1)
+            #print("serching database... ")
+            #time.sleep(1)
+            #print("Record found!")
+            #print("|")
+            #print("citizen record; (name) ")
+            #print("username=(DC username)")
+            #print("user_traits= (any) ")
+            #print("health_record_status=(True/false) current_records=## record_severety=(low/med/high) highest_alert=(any)")
+            #print("end of file.")
+            #print("|")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #THE VRCL startup with the welcome message. this is so the welcome message clone does not happen again. 
 def VRCL_startup():
@@ -489,6 +517,7 @@ def VRCL_startup():
     V_R_C_L_COMMAND_PANEL()
 
 def VRCL_welcome_message():
+    print("|")
     print("Welcome VAIIYA trustee or other high authorization. ")
     print("|")
     print("This is the V.AIIYA R.ESTRICTED C.OMMAND L.INE Terminal. where some (not all) user records are found. use keywords to acsess records")
@@ -506,9 +535,39 @@ def V_R_C_L_COMMAND_PANEL():
         elif V_R_C_L_TEXT == 'records':
             print("|")
             print("record; walker")
-            print("placeholder")
+            print("record; frostbyte")
+            print("record; violet ")
 
+        elif V_R_C_L_TEXT == 'violet':
+            print("|")
+            print("VAIIYA RESTRICTED COMMAND LINE (V.R.C.L.) FINGING INQUIRY....")
+            time.sleep(1)
+            print("serching database... ")
+            time.sleep(1)
+            print("Record found!")
+            print("|")
+            print("citizen record; violet ")
+            print("username=violet_120")
+            print("user_traits= dormant and non-reposnsive when on duty. does not interact without a ping. ")
+            print("health_record_status=True current_records=7 record_severety=low highest_alert=NONE")
+            print("end of file.")
+            print("|")
 
+        elif V_R_C_L_TEXT == 'frostbyte':
+            print("|")
+            print("VAIIYA RESTRICTED COMMAND LINE (V.R.C.L.) FINGING INQUIRY....")
+            time.sleep(1)
+            print("serching database... ")
+            time.sleep(1)
+            print("Record found!")
+            print("|")
+            print("citizen record; frostbyte")
+            print("username=frost.dime")
+            print("user_traits= funny, quote'says UwU OwO and other. please advise' ")
+            print("health_record_status=True current_health_records=1479 current_untracked_health_records=1457 ")
+            print("record_severety=high highest_alert=severe mental issues unreported. ")
+            print("end of file.")
+            print("|")
 
         elif V_R_C_L_TEXT == 'walker':
             print("|")
