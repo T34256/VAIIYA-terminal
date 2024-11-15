@@ -540,7 +540,7 @@ def V_R_C_L_COMMAND_PANEL():
 
         elif V_R_C_L_TEXT == 'violet':
             print("|")
-            print("VAIIYA RESTRICTED COMMAND LINE (V.R.C.L.) FINGING INQUIRY....")
+            print("V.R.C.L. FINGING INQUIRY....")
             time.sleep(1)
             print("serching database... ")
             time.sleep(1)
@@ -555,7 +555,7 @@ def V_R_C_L_COMMAND_PANEL():
 
         elif V_R_C_L_TEXT == 'frostbyte':
             print("|")
-            print("VAIIYA RESTRICTED COMMAND LINE (V.R.C.L.) FINGING INQUIRY....")
+            print("V.R.C.L. FINGING INQUIRY....")
             time.sleep(1)
             print("serching database... ")
             time.sleep(1)
@@ -571,7 +571,7 @@ def V_R_C_L_COMMAND_PANEL():
 
         elif V_R_C_L_TEXT == 'walker':
             print("|")
-            print("VAIIYA RESTRICTED COMMAND LINE (V.R.C.L.) FINGING INQUIRY....")
+            print("V.R.C.L. FINGING INQUIRY....")
             time.sleep(1)
             print("serching database... ")
             time.sleep(1)
