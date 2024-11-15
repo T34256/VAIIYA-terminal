@@ -346,7 +346,7 @@ def DEBUG_CMD():
             print("WALKER")
             print("FROST")
                 
-        elif text == 'exit':
+        elif text == 'EXIT':
             break
 
         else:
