@@ -12,7 +12,7 @@ also as a side note: this will be a very good experemantation for password prote
 ( ps; rob if you read this, can i have the offical VAIIYA ASCII art for my code plz 🙏🥹 ) 
 
 # The game
-**IMPRORTANT NOTE: THE VAIIYA TERMINAL EXE's HAVE FLAGGED WINDOWS SMART APP CONTROLL DUE TO THE EXE's NOT BEING SIGNED. YOU CAN SAFELY IGNORE THESE WARNINGS.**
+**IMPRORTANT NOTE: THE VAIIYA TERMINAL EXE's HAVE FLAGGED WINDOWS SMART APP CONTROL DUE TO THE EXE's NOT BEING SIGNED. YOU CAN SAFELY IGNORE THESE WARNINGS.**
 
 
 ![image](https://github.com/user-attachments/assets/c8e9ee6f-d77e-455a-9e79-b1ce7b03953d)
