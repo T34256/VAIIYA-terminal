@@ -331,8 +331,8 @@ def DEBUG_CMD():
     while True:
         text = prompt('DEBUG COMMANDLINE >>> ')        
 
-        if text == 'VRCL':
-            VRCL_startup()
+        if text == 'VRRALSA':
+            VRRALSA_startup()
 
         elif text == 'WALKER':
             walker_entered()
@@ -342,7 +342,7 @@ def DEBUG_CMD():
 
         elif text == 'COMMANDS':
             print("commands:")
-            print("VRCL")
+            print("VRRALSA")
             print("WALKER")
             print("FROST")
             print("EXIT")
@@ -473,12 +473,9 @@ def frostbytes_EE_entered():
     title='VAIIYA Warning systems',
     text='thank you for your attention. you may continue your tasks and have a safe day!').run()
     
+    while True:
+        prompt('system$frostbyte>>> ')
     
-    print(f"""welcome frostbyte! to your ee/login! dont worry, no one will find your password ^_+ """)
-    text = prompt("type EXIT to exit this page;")
-    
-    if text == 'exit':
-        return
 #END OF FROST EE CODE, 
 
 
@@ -510,37 +507,38 @@ def frostbytes_EE_entered():
 
 
 
-
+#RENAMED VRCL TO VAIIYA RESTRICTED RECORDS AND LOGS SYSTEM AUTOMATED. OR V.R.R.A.L.S.A.
 #THE VRCL startup with the welcome message. this is so the welcome message clone does not happen again. 
-def VRCL_startup():
-    VRCL_welcome_message()
-    V_R_C_L_COMMAND_PANEL()
+def VRRALSA_startup():
+    VRRALSA_welcome_message()
+    VRRALSA_COMMAND_PANEL()
 
-def VRCL_welcome_message():
+def VRRALSA_welcome_message():
     print("|")
     print("Welcome VAIIYA trustee or other high authorization. ")
     print("|")
-    print("This is the V.AIIYA R.ESTRICTED C.OMMAND L.INE Terminal. where some (not all) user records are found. use keywords to acsess records")
+    print("This is the V.AIIYA R.ESTRICTED R.ECORDS A.ND L.OGS S.YSTEM A.UTOMATED Terminal.")
+    print("where some (not all) user records are found. use keywords to acsess records.")
     print("use command 'records' for avalable records ")
-def V_R_C_L_COMMAND_PANEL():
+def VRRALSA_COMMAND_PANEL():
     
     while True:
         print("|") 
-        V_R_C_L_TEXT = prompt('V.R.C.L. awaiting command(s)>>>> ')
+        VRRALSA_TEXT = prompt('V.R.R.A.L.S.A. awaiting command(s)>>>> ')
 
-        if  V_R_C_L_TEXT == 'test':
+        if  VRRALSA_TEXT == 'test':
             print("yes I do beleve it works! ")
         
 
-        elif V_R_C_L_TEXT == 'records':
+        elif VRRALSA_TEXT == 'records':
             print("|")
             print("record; walker")
             print("record; frostbyte")
             print("record; violet ")
 
-        elif V_R_C_L_TEXT == 'violet':
+        elif VRRALSA_TEXT == 'violet':
             print("|")
-            print("V.R.C.L. FINGING INQUIRY....")
+            print("V.R.R.A.L.S.A. FINGING INQUIRY....")
             time.sleep(1)
             print("serching database... ")
             time.sleep(1)
@@ -553,9 +551,9 @@ def V_R_C_L_COMMAND_PANEL():
             print("end of file.")
             print("|")
 
-        elif V_R_C_L_TEXT == 'frostbyte':
+        elif VRRALSA_TEXT == 'frostbyte':
             print("|")
-            print("V.R.C.L. FINGING INQUIRY....")
+            print("V.R.R.A.L.S.A. FINGING INQUIRY....")
             time.sleep(1)
             print("serching database... ")
             time.sleep(1)
@@ -569,9 +567,9 @@ def V_R_C_L_COMMAND_PANEL():
             print("end of file.")
             print("|")
 
-        elif V_R_C_L_TEXT == 'walker':
+        elif VRRALSA_TEXT == 'walker':
             print("|")
-            print("V.R.C.L. FINGING INQUIRY....")
+            print("V.R.R.A.L.S.A. FINGING INQUIRY....")
             time.sleep(1)
             print("serching database... ")
             time.sleep(1)
@@ -588,12 +586,12 @@ def V_R_C_L_COMMAND_PANEL():
 
 
 
-        elif V_R_C_L_TEXT == 'exit':
+        elif VRRALSA_TEXT == 'exit':
             return
         
         else: 
             print("|")
-            print("V.R.C.L. ERROR; RECORD DOES NOT EXIST. CHECK SPELLING, CAPS, OR OTHER.")
+            print("V.R.C.L. ERROR; KEYWORD DOES NOT LINK TO RECORD OR LOG. CHECK SPELLING, CAPS, OR OTHER.")
 #END OF THE VRCL COMMAND SYSTEM
 
 
