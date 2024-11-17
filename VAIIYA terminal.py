@@ -228,7 +228,7 @@ def open_terminal():
         text = prompt('awaiting command(s)>>> ')
 #put all the usercommands under here please! 
         #this is the FIRST `if`, replace and all new should be `elif`.
-        if text == 't342':
+        if text == 'T342':
             print('hey thanks for saying something!')
             continue
 #this is BELOW the first command. put `elif` on all new commands.
@@ -327,6 +327,8 @@ def open_terminal():
             print("please check spelling, spaces, or other. or use 'commands'")
 
 # PLEASE PUT ALL 2ND DEF(S) BELOW THIS NOTE! 
+
+#MAKE SURE THIS IS DISABLED BEFORE RELEASE!!! 
 def DEBUG_CMD():
     
     while True:
