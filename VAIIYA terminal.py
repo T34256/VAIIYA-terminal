@@ -291,7 +291,7 @@ def open_terminal():
 
 
         #BELOW IS THE DEBUG COMMANDLINE, DO NOT LEAVE ON FOR RELEASE!     
-        elif text == 'DEBUG':
+        #elif text == 'DEBUG':
             DEBUG_CMD()
 
 
@@ -304,7 +304,6 @@ def open_terminal():
             print("command; walker | The login for CM|walker")
             print("command; frostbyte | The login for CM|frostbyte")
             print("command; version | check what version of VAIIYA terminal you are running!")
-            print("placeholder here | explanation here")
             print("""C0MM#N0D;;. CNS | {ERROR: UNKNOWN PROGRAM ENTITY}""")
             print("""|""")
             print("""|""")
