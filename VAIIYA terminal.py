@@ -240,6 +240,7 @@ def open_terminal():
             print("The credits of VAIIYA terminal!")
             print("""|""")
             print("Owner: T342, T342guy or Nathan johnson.")
+            print("licensed under MIT ©2024 Nathan Johnson. view LICENSE for more info.")
             print("""|""")
             print("contributors: ")
             print("Smashel from discord.")
