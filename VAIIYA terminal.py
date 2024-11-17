@@ -447,6 +447,12 @@ def walker_entered():
 
         elif text == 'VRRALSA':
             VRRALSA_startup()
+        
+        elif text == 'exit':
+            return
+        
+        else:
+            print("that isnt a command. use 'commands'")
 
     
 
@@ -501,7 +507,12 @@ def frostbyte_entered():
 
         elif text == 'VRRALSA':
             VRRALSA_startup()
-    
+        
+        elif text == 'exit':
+            return
+
+        else:
+            print("that isnt a command. use 'commands'")
 #END OF FROST EE CODE, 
 
 
