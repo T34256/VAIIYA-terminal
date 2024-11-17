@@ -323,7 +323,8 @@ def open_terminal():
         
         #error response
         else:
-            print("uhh, hmm, i dont think thats a command friend! type 'commands' for a list of commands!")
+            print("VAIIYA Engine did not detect that as a valid command.")
+            print("please check spelling, spaces, or other. or use 'commands'")
 
 # PLEASE PUT ALL 2ND DEF(S) BELOW THIS NOTE! 
 def DEBUG_CMD():
