@@ -430,10 +430,22 @@ def walker_login():
 def walker_entered():
     print("welcome walker! here currently there is nothing, i have no idea what to put here for you guys.")
     print("but id assume you are familiar with github so if you have an idea i would more than glad take a look and try to implement it! ")
-    text = prompt("type EXIT to exit this page; ")
-    if text == 'exit':
-        return
-        #end of walker login
+    
+    
+    print("|")
+    print("|")
+    print("use 'commands' for available commands")
+    while True:
+        text = prompt("system$walker>>> ")
+
+        if text == 'commands':
+            print("commands for sys$walker")
+            print("command; VRRALSA")
+
+        elif text == 'VRRALSA':
+            VRRALSA_startup()
+
+    
 
 
 
