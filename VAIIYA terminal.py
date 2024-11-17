@@ -291,7 +291,7 @@ def open_terminal():
 
 
         #BELOW IS THE DEBUG COMMANDLINE, DO NOT LEAVE ON FOR RELEASE!     
-        elif text == 'DEBUG':
+        #elif text == 'DEBUG':
             DEBUG_COMMANDLINE()
 
 
@@ -631,11 +631,11 @@ def VRRALSA_COMMAND_PANEL():
 
 # Main system loop
 def game_loop():
-    #check_for_update_plz()
-    #startup_screen_ascii_roll()
-    #loading_bars_intro_1()
-    #loading_bars_intro_2()
-    #loading_bars_intro_3()
+    check_for_update_plz()
+    startup_screen_ascii_roll()
+    loading_bars_intro_1()
+    loading_bars_intro_2()
+    loading_bars_intro_3()
     main_menu()
     message_of_the_day()
     timefetch()
