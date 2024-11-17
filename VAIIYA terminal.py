@@ -12,15 +12,15 @@ import bcrypt
 from datetime import datetime
 from prompt_toolkit import print_formatted_text, HTML
 import random
-#changes the size of the Command promp so it is easyer to read (and that the ASCII doesnt soft wrap)
+import tkinter.messagebox 
+#changes the size of the Command prompt so it is easier to read (and that the ASCII doesnt soft wrap)
 
-def window_resize_startup():
-#put the CMD reisze code here, this is disabled for the tiem being 
-    CMD = "mode 1000,1000"
-    os.system(CMD)
+def check_for_update_plz():
+    tkinter.messagebox.showinfo(title='Check for updates :3', message='hey! check to see if you are using the latest version! :3')
+    
 
 #this idea was requested by Smashel on issue #30. 
-#defualt value is 1-5650
+#default value is 1-5650
 #if it somehow gets that number the ascii will "corrupt" and use an alt
 def startup_screen_ascii_roll():
     corrupted_ascii_roll = random.randint(1,5650)
@@ -69,30 +69,30 @@ def norm_startup_screen_ASCII():
                                               \|||||||||\ \::::::::::\
                                                \|||||||||\ \::::::::::\
                                                 \|||||||||\ \::::::::::\
-\-------\             /--------/  /-------\  \--------\  \--------\  \--------\           /---------/  /------\
- \.......\           /......../  /.........\  \........\  \........\  \........\         /........./  /........\
-  \.......\         /......../  /...........\  \........\  \........\  \........\       /........./  /..........\
-   \.......\       /......../  /.............\  \........\  \........\  \........\     /........./  /............\
-    \.......\     /......../  /......__.......\  \........\  \........\  \........\   /........./  /..............\
-     \.......\   /......../  /....../  \.......\  \........\  \........\  \........\_/........./  /....../  \......\
-      \.......\ /......../  /....../    \.......\  \........\  \........\  \................../  /....../    \......\
-       \................/  /....../      \.......\  \........\  \........\  \................/  /....../      \......\
-        \............../  /....../        \.......\  \........\  \........\  \............../  /....../        \......\
-         \............/  /....../          \.......\  \........\  \........\  \............/  /....../          \......\
-          \........../  /....../            \.......\  \........\  \........\  \........../  /....../            \......\
-                                                                               /........./
+\-------\             /--------/  /------\  \--------\  \--------\  \--------\           /---------/  /------\
+ \.......\           /......../  /........\  \........\  \........\  \........\         /........./  /........\
+  \.......\         /......../  /..........\  \........\  \........\  \........\       /........./  /..........\
+   \.......\       /......../  /............\  \........\  \........\  \........\     /........./  /............\
+    \.......\     /......../  /......__......\  \........\  \........\  \........\   /........./  /..............\
+     \.......\   /......../  /....../  \......\  \........\  \........\  \........\_/........./  /....../  \......\
+      \.......\ /......../  /....../    \......\  \........\  \........\  \................../  /....../    \......\
+       \................/  /....../      \......\  \........\  \........\  \................/  /....../      \......\
+        \............../  /....../        \......\  \........\  \........\  \............../  /....../        \......\
+         \............/  /....../          \......\  \........\  \........\  \............/  /....../          \......\
+          \........../  /....../            \......\  \........\  \........\  \........../  /....../            \......\
                                                                               /........./
                                                                              /........./
                                                                             /........./
-                                                                           /---------/
+                                                                           /........./
+                                                                          /---------/
                                                     VAIIYA technologies LLC
                                             Empowering security, one byte at a time.
 
                                             
                                     please wait while the program does mandatory checks.
     """)
-#title stuff for new loadin screen 
-#BEHAVEIOR NOTE: THE PROMPT TK LOADINGBARS CANNOT GO OVER .01 FLOAT FOR SOME REASON! (thanks smashel for the idea, but was unable to make it happen)
+#title stuff for new loading screen 
+#BEHAVIOR NOTE: THE PROMPT TK LOADINGBARS CANNOT GO OVER .01 FLOAT FOR SOME REASON! (thanks smashel for the idea, but was unable to make it happen)
 def loading_bars_intro_1():
 
     title = HTML('Connecting to the VAIIYA Defender framework....')
@@ -162,17 +162,17 @@ def main_menu():
                                               \|||||||||\ \::::::::::\
                                                \|||||||||\ \::::::::::\
                                                 \|||||||||\ \::::::::::\
-\-------\             /--------/  /------\  \--------\  \--------\  \--------\           /---------/  /-------\
- \.......\           /......../  /........\  \........\  \........\  \........\         /........./  /.........\
-  \.......\         /......../  /..........\  \........\  \........\  \........\       /........./  /...........\
-   \.......\       /......../  /............\  \........\  \........\  \........\     /........./  /.............\
-    \.......\     /......../  /......__......\  \........\  \........\  \........\   /........./  /...............\
-     \.......\   /......../  /....../  \......\  \........\  \........\  \........\_/........./  /......./  \......\
-      \.......\ /......../  /....../    \......\  \........\  \........\  \................../  /......./    \......\
-       \................/  /....../      \......\  \........\  \........\  \................/  /......./      \......\
-        \............../  /....../        \......\  \........\  \........\  \............../  /......./        \......\
-         \............/  /....../          \......\  \........\  \........\  \............/  /......./          \......\
-          \........../  /....../            \......\  \........\  \........\  \........../  /......./            \......\
+\-------\             /--------/  /------\  \--------\  \--------\  \--------\           /---------/  /------\
+ \.......\           /......../  /........\  \........\  \........\  \........\         /........./  /........\
+  \.......\         /......../  /..........\  \........\  \........\  \........\       /........./  /..........\
+   \.......\       /......../  /............\  \........\  \........\  \........\     /........./  /............\
+    \.......\     /......../  /......__......\  \........\  \........\  \........\   /........./  /..............\
+     \.......\   /......../  /....../  \......\  \........\  \........\  \........\_/........./  /....../  \......\
+      \.......\ /......../  /....../    \......\  \........\  \........\  \................../  /....../    \......\
+       \................/  /....../      \......\  \........\  \........\  \................/  /....../      \......\
+        \............../  /....../        \......\  \........\  \........\  \............../  /....../        \......\
+         \............/  /....../          \......\  \........\  \........\  \............/  /....../          \......\
+          \........../  /....../            \......\  \........\  \........\  \........../  /....../            \......\
                                                                               /........./
                                                                              /........./
                                                                             /........./
@@ -184,10 +184,25 @@ def main_menu():
                                             
                         Welcome to the Terminal! all checks are complete. you can continue on your work.
     """)
+def message_of_the_day(): #or per boot 
+    print("|")
+    print("The message of the day is: ")
+    print("|") 
+    #picks a random number, each value (depending on how many messages) will have a number. 
+    MOTD = random.randint(1,3)
+
+    if MOTD == 1: 
+        print("john? what the hell are you doing over there? GET BACK TO WO- ##TRANSCRIPT ENDED CODE 87##")
+    elif MOTD == 2: 
+        print("Remember: CNS is our greatest enemy! WE CANNOT LET THEM INTO THE SYSTE- ## LOG SYSTEM FAILURE CODE #9)*^9 ##")
+    elif MOTD == 3:
+        print("SYSTEM AUTOLOG OVERRIDE: SERVERS #108,#196,#102,#156,#342 HAVE BEEN ISOLATED. DO NOT CHANGE THIS ORDER.")
+
 def timefetch():
 #time fetch for login
     curtime = datetime.now().strftime('%H:%M:%S') 
     curdate = datetime.now().strftime('%Y-%m-%d')
+    print("|")
     print("""|""")
     print('Welcome VAIIYA trustee! the time is: ',curtime)
     print('and the date is: ',curdate)
@@ -199,8 +214,8 @@ def terminal_start_message():
     print(" for a list of commands, please type 'commands' ")
     print("""|""")
 
-#TERMINAL BEHAVIOR NOTES! make sure to use `elif` instead of `if`. this will prevent the error string from printing if we retun from the EEs or logins.
-#
+#TERMINAL BEHAVIOR NOTES! make sure to use `elif` instead of `if`. this will prevent the error string from printing if we return from the EEs or logins.
+#ANOTHER NOTE: exit() AND quit() COUNT AS DEBUGGING, SO A TRACKBACK WILL CALL. USE `raise SystemExit` FROM NOW ON!
 #
 #notes here^^^
 
@@ -213,8 +228,8 @@ def open_terminal():
         text = prompt('awaiting command(s)>>> ')
 #put all the usercommands under here please! 
         #this is the FIRST `if`, replace and all new should be `elif`.
-        if text == 't342':
-            print('heyy thanks for sayin somthin!')
+        if text == 'T342':
+            print('hey thanks for saying something!')
             continue
 #this is BELOW the first command. put `elif` on all new commands.
 
@@ -225,6 +240,7 @@ def open_terminal():
             print("The credits of VAIIYA terminal!")
             print("""|""")
             print("Owner: T342, T342guy or Nathan johnson.")
+            print("licensed under MIT ©2024 Nathan Johnson. view LICENSE for more info.")
             print("""|""")
             print("contributors: ")
             print("Smashel from discord.")
@@ -234,7 +250,13 @@ def open_terminal():
             print("and thats all for now! have fun, stay safe and secure! VAIIYA trustees and THE FINALS contestants!")
             print("""|""")
             
-
+        elif text == 'version':
+            print("|")
+            print("VAIIYA Terminal Engine version 23.58-B ")
+            print("detected operating device: IBM 5150 VAIIYA secure system fitted.")
+            print("OS system detected: MuCoDOS V27.592 private")
+            print("VAIIYA Terminal release V10")
+            print("|")
             #the link given will NEVER EXPIRE
         elif text == 'discord':
             print("""|""")
@@ -244,7 +266,7 @@ def open_terminal():
 
 
         elif text == 'CNS':
-            print("CNS_VAIIYA_BYPASS_V4.567.EXE EXITCUTING....")
+            print("CNS_VAIIYA_BYPASS_V4.567.EXE EXECUTING....")
             time.sleep(2)
             CNS_EE_HAKED()
         
@@ -265,43 +287,80 @@ def open_terminal():
 
 
 #below are all the non-user commands, DO NOT REMOVE!
+
+
+
+        #BELOW IS THE DEBUG COMMANDLINE, DO NOT LEAVE ON FOR RELEASE!     
+        #elif text == 'DEBUG':
+            DEBUG_COMMANDLINE()
+
+
             #the COMMANDS directory, DO NOT REMOVE!
         elif text == 'commands':
             print("""|""")
             print("""|""")
-            print("Avalible commands: (all may not be listed.)")
+            print("Available commands: (all may not be listed.)")
             print("""|""")
             print("command; walker | The login for CM|walker")
             print("command; frostbyte | The login for CM|frostbyte")
-            print("placeholder here | explanation here")
-            print("placeholder here | explanation here")
-            print("""C0MM#N0D;;.."' CNS | {ERROR: UNKNOWN PROGRAM ENTITY}""")
+            print("command; version | check what version of VAIIYA terminal you are running!")
+            print("""C0MM#N0D;;. CNS | {ERROR: UNKNOWN PROGRAM ENTITY}""")
             print("""|""")
             print("""|""")
             print("""command; credits | the credits to the game! (^///^) """)
             print("command; discord | get a invite link to The VAIIYA hub!, a hang-about and VAIIYA-terminal server!")
             print("""|""")
             print("""|""")
-            
+        #this solves the space command issue. leave blank    
+        elif text == '':
+            continue
+
             #the EXIT command, DO NOT REMOVE!! 
         elif text == 'exit':
             print('exiting the terminal... have a nice day!')
             time.sleep(0.5)
-            quit()
+            raise SystemExit 
         
         #error response
         else:
-            print("uhh, hmm, i dont think thats a command friend! type 'commands' for a list of commands!")
+            print("VAIIYA Engine did not detect that as a valid command.")
+            print("please check spelling, spaces, or other. or use 'commands'")
 
 # PLEASE PUT ALL 2ND DEF(S) BELOW THIS NOTE! 
 
+#MAKE SURE THIS IS DISABLED BEFORE RELEASE!!! 
+def DEBUG_COMMANDLINE():
+    
+    while True:
+        text = prompt('DEBUG COMMANDLINE >>> ')        
 
+        if text == 'VRRALSA':
+            VRRALSA_startup()
+
+        elif text == 'WALKER':
+            walker_entered()
+
+        elif text == 'FROST':
+            frostbyte_entered()
+
+        elif text == 'COMMANDS':
+            print("commands:")
+            print("VRRALSA")
+            print("WALKER")
+            print("FROST")
+            print("EXIT")
+                
+        elif text == 'EXIT':
+            break
+
+        else:
+            print("use COMMANDS if you forgot")
 
 
 
 
 #PUT ALL FUNC DEFS BELOW HERE! 
-# the CNS EE below this messange
+# the CNS EE below this message
 def CNS_EE_HAKED():
     #below is the Y/N prompt for CNS, and the following `result` can be split into a bool and set as True or False
     result = yes_no_dialog(
@@ -312,7 +371,7 @@ def CNS_EE_HAKED():
          message_dialog(
     title='CNS.02.06.01',
     text='very well then, we will see you soon enough').run()
-         #then after it retuns to the main menu and exits the program.
+         #then after it returns to the main menu and exits the program.
          print("VAIIYA DEFENDER ENGINE CRITICAL FAILURE!: THE VAIIYA DEFENDER ENGINE HAS FOUND A BREACH AND WILL NOW FORCE QUIT THE PROGRAM")
          print("""|""")
          print("THE PROGRAM WILL SHUTDOWN IN:")
@@ -323,12 +382,12 @@ def CNS_EE_HAKED():
          time.sleep(1)
          print("1")
          time.sleep(1)
-         quit()
+         raise SystemExit
     #if the `result` has a bool of False, then it will run this part of code. and again will return to menu and exit the program. 
     if result == False:
          message_dialog(
     title='CNS.02.06.01',
-    text='how dissapointing, that you dont want tHe TrutH. we will see you soon enough').run()
+    text='how disappointing, that you dont want tHe TrutH. we will see you soon enough').run()
          print("VAIIYA DEFENDER ENGINE CRITICAL FAILURE!: THE VAIIYA DEFENDER ENGINE HAS FOUND A BREACH AND WILL NOW FORCE QUIT THE PROGRAM")
          print("""|""")
          print("THE PROGRAM WILL SHUTDOWN IN:")
@@ -339,10 +398,12 @@ def CNS_EE_HAKED():
          time.sleep(1)
          print("1")
          time.sleep(1)
-         quit()
+         raise SystemExit
 #the idea above from smashel! 
 
-#add passwords here for the logins and name the vars respectivly.
+
+
+#add passwords here for the logins and name the vars respectively.
 # 
 #the website for reference to the password system is https://www.geeksforgeeks.org/npm-bcrypt/   
 #walkerpasswrd1
@@ -353,50 +414,69 @@ frosthash = b'$2b$12$AUur7AKX1aGQurOlmM46Pu0OX9HXqx6UHH9SHiEvrCJM56JvUjYfu'
 
 #walker login here
 def walker_login():
-    #when exiting the prompt with the `<cancel>`, the program will forcequit for some reason. 
+    #when exiting the prompt with the `<cancel>`, the program will force-quit for some reason. 
 
     #password prompt; 
     userpassword = text = input_dialog(
     title='Walker password input',
     text='walker password:').run()
-    #encodes the given password for comapare
+    #encodes the given password for compare
     userpassword = userpassword.encode('utf-8')
 
-    #comapre password hashes, if identical then "result" == True, then it will move onto walker_entered
+    #compare password hashes, if identical then "result" == True, then it will move onto walker_entered
     result = bcrypt.checkpw(userpassword, walkerhash)
     if result:
           walker_entered()
-#end of walker password varifi 
+#end of walker password verify 
+
 
 def walker_entered():
-    print("welcome walker! here currnently there is nothing, i have no idea what to put here for you guys.")
+    print("welcome walker! here currently there is nothing, i have no idea what to put here for you guys.")
     print("but id assume you are familiar with github so if you have an idea i would more than glad take a look and try to implement it! ")
-    text = prompt("type EXIT to exit this page; ")
-    if text == 'exit':
-        return
-        #end of walker login
+    
+    
+    print("|")
+    print("|")
+    print("use 'commands' for available commands")
+    while True:
+        text = prompt("system$walker>>> ")
+
+        if text == 'commands':
+            print("commands for sys$walker")
+            print("command; VRRALSA")
+
+        elif text == 'VRRALSA':
+            VRRALSA_startup()
+        
+        elif text == 'exit':
+            return
+        
+        else:
+            print("that isnt a command. use 'commands'")
+
+    
+
+
 
 # FROST EE STUFF OVER HERE!
 def frostbyte_login():
-                
-    #there is a bug that cuases the `no command` string to print when exiting.
-    print("to exit, type EXIT in the password!")
     userpassword = text = input_dialog(
     title='frostbyte password input',
     text='frostbyte password:').run()
     
     userpassword = userpassword.encode('utf-8')
                
-    #comapre password hashes
+    #compare password hashes
     result = bcrypt.checkpw(userpassword, frosthash)
     if result:
-          frostbytes_EE_entered()
-    if text == 'exit':
-        return
+          frostbyte_entered()
+
+
+
 # 2nd part to the FROST EE                     
-def frostbytes_EE_entered():
+def frostbyte_entered():
     
-    #the following prompts from promptTK are for frost taling about UwU more and more ¯\_(ツ)_/¯
+    #the following prompts from promptTK are for frost taking about UwU more and more ¯\_(ツ)_/¯
     message_dialog(
     title='VAIIYA Warning systems',
     text='VAIIYA TERMINAL WARNING AWAITING ATTENTION!').run()
@@ -409,24 +489,155 @@ def frostbytes_EE_entered():
     title='VAIIYA Warning systems',
     text='thank you for your attention. you may continue your tasks and have a safe day!').run()
     
+    print("|")
+    print("|")
+    print("use 'commands' for available") 
     
-    print(f"""welcome frostbyte! to your ee/login! dont worry, no one will find your password ^_+ """)
-    text = prompt("type EXIT to exit this page;")
-    
-    if text == 'exit':
-        return
+    while True:
+        text = prompt('system$frostbyte>>> ')
+
+        if text == 'commands':
+            print("commands for sys$frostbyte ")
+            print("command; VRRALSA")
+
+        elif text == 'VRRALSA':
+            VRRALSA_startup()
+        
+        elif text == 'exit':
+            return
+
+        else:
+            print("that isnt a command. use 'commands'")
 #END OF FROST EE CODE, 
+
+
+#USER TEMPLATE HERE
+            #print("|")
+            #print("V.R.R.A.L.S.A. FINDING INQUIRY....")
+            #time.sleep(1)
+            #print("searching database... ")
+            #time.sleep(1)
+            #print("Record found!")
+            #print("|")
+            #print("citizen record; (name) ")
+            #print("username=(DC username)")
+            #print("user_traits= (any) ")
+            #print("health_record_status=(True/false) current_records=## record_severity=(low/med/high) highest_alert=(any)")
+            #print("end of file.")
+            #print("|")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#RENAMED VRCL TO VAIIYA RESTRICTED RECORDS AND LOGS SYSTEM AUTOMATED. OR V.R.R.A.L.S.A.
+#THE VRCL startup with the welcome message. this is so the welcome message clone does not happen again. 
+def VRRALSA_startup():
+    VRRALSA_welcome_message()
+    VRRALSA_COMMAND_PANEL()
+
+def VRRALSA_welcome_message():
+    print("|")
+    print("Welcome VAIIYA trustee or other high authorization. ")
+    print("|")
+    print("This is the V.AIIYA R.ESTRICTED R.ECORDS A.ND L.OGS S.YSTEM A.UTOMATED Terminal.")
+    print("where some (not all) user records are found. use keywords to access records.")
+    print("use command 'records' for available records ")
+def VRRALSA_COMMAND_PANEL():
+    
+    while True:
+        print("|") 
+        VRRALSA_TEXT = prompt('V.R.R.A.L.S.A. awaiting command(s)>>>> ')
+
+        if  VRRALSA_TEXT == 'test':
+            print("yes I do believe it works! ")
+        
+
+        elif VRRALSA_TEXT == 'records':
+            print("|")
+            print("record; walker")
+            print("record; frostbyte")
+            print("record; violet ")
+
+        elif VRRALSA_TEXT == 'violet':
+            print("|")
+            print("V.R.R.A.L.S.A. FINDING INQUIRY....")
+            time.sleep(1)
+            print("searching database... ")
+            time.sleep(1)
+            print("Record found!")
+            print("|")
+            print("citizen record; violet ")
+            print("username=violet_120")
+            print("user_traits= dormant and non-responsive when on duty. does not interact without a ping. ")
+            print("health_record_status=True current_records=7 record_severity=low highest_alert=NONE")
+            print("end of file.")
+            print("|")
+
+        elif VRRALSA_TEXT == 'frostbyte':
+            print("|")
+            print("V.R.R.A.L.S.A. FINDING INQUIRY....")
+            time.sleep(1)
+            print("searching database... ")
+            time.sleep(1)
+            print("Record found!")
+            print("|")
+            print("citizen record; frostbyte")
+            print("username=frost.dime")
+            print("user_traits= funny, quote'says UwU OwO and other. please advise' ")
+            print("health_record_status=True current_health_records=1479 current_untracked_health_records=1457 ")
+            print("record_severity=high highest_alert=severe mental issues unreported. ")
+            print("end of file.")
+            print("|")
+
+        elif VRRALSA_TEXT == 'walker':
+            print("|")
+            print("V.R.R.A.L.S.A. FINDING INQUIRY....")
+            time.sleep(1)
+            print("searching database... ")
+            time.sleep(1)
+            print("Record found!")
+            print("|")
+            print("citizen record; Walker  user_traits=enjoys_'dinos' drinks_excessive_amounts_of_coffee ")
+            print("username=walkercm")
+            print("user_traits=enjoys_'dinos' drinks_excessive_amounts_of_coffee")
+            print("health_record_status=True current_records=17 record_severity=low highest_alert=heart_attack_of_coffee")
+            print("end of file.")
+            print("|")
+
+
+
+
+
+        elif VRRALSA_TEXT == 'exit':
+            return
+        
+        else: 
+            print("|")
+            print("V.R.C.L. ERROR; KEYWORD DOES NOT LINK TO RECORD OR LOG. CHECK SPELLING, CAPS, OR OTHER.")
+#END OF THE VRCL COMMAND SYSTEM
+
 
 
 
 # Main system loop
 def game_loop():
-    #window_resize_startup()
+    check_for_update_plz()
     startup_screen_ascii_roll()
     loading_bars_intro_1()
     loading_bars_intro_2()
     loading_bars_intro_3()
     main_menu()
+    message_of_the_day()
     timefetch()
     terminal_start_message()
     open_terminal()
@@ -438,32 +649,6 @@ def game_loop():
 # Start the game
 game_loop()
 
-
 #this func is not required for the operation of the program, so it is disabled.
-
-
 #if __name__ == "__main__":
 #        main()
-
-#the notes below are very old. (maybe from v0.0.2 or v0.0.3)
-
-
-
-#IMPORTANT NOTES AND BEHAVEIORS IN CODE!!!! 
-# 1. NEVER put a IF staement with a OR command!! or any other command will do the same action!! including undefined ones!! 
-# the way to get arount this is use a ELIF command, than the OR statement will not reapet undefined or incorrect strings!!! - T342 the owner if you were snooping >:3 
-
-#update above: you cannot use workaround in main menu!! i have no idea why! you will just need to make a dual command instead. 
-
-# 2. UwU dont you say ANYTHING ABOUT THAT - NOT T342, DONT TELL FROST PLEASESSSSSSSSSSSSSSSSSSSSSS
-
-
-#found new menu system that need the EXIT command:
-#  
-#command = input("type EXIT to go to main menu>>> ").lower()
-#    while True:
-        #if command == "exit":
-            #break
-# use that at the end of a text viewscreen or file viewer - T342 you extra snoop >:3 
-
-
