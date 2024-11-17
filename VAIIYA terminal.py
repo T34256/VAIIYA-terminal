@@ -255,7 +255,7 @@ def open_terminal():
             print("VAIIYA Terminal Engine version 23.58-B ")
             print("detected operating device: IBM 5150 VAIIYA secure system fitted.")
             print("OS system detected: MuCoDOS V27.592 private")
-            print("VAIIYA Terminal release V10-PRE")
+            print("VAIIYA Terminal release V10")
             print("|")
             #the link given will NEVER EXPIRE
         elif text == 'discord':
