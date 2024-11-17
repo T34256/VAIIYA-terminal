@@ -341,7 +341,7 @@ def DEBUG_CMD():
             walker_entered()
 
         elif text == 'FROST':
-            frostbytes_EE_entered()
+            frostbyte_entered()
 
         elif text == 'COMMANDS':
             print("commands:")
@@ -466,14 +466,14 @@ def frostbyte_login():
     #compare password hashes
     result = bcrypt.checkpw(userpassword, frosthash)
     if result:
-          frostbytes_EE_entered()
+          frostbyte_entered()
     if text == 'exit':
         return
 
 
 
 # 2nd part to the FROST EE                     
-def frostbytes_EE_entered():
+def frostbyte_entered():
     
     #the following prompts from promptTK are for frost taking about UwU more and more ¯\_(ツ)_/¯
     message_dialog(
