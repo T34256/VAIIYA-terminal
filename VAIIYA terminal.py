@@ -633,10 +633,10 @@ def VRRALSA_COMMAND_PANEL():
 
 #BELOW IS THE DEBUG COMMANDLINE ENABLE, SET TO TRUE FOR IT TO WORK.  FALSE FOR RELEASE
 def DEBUG_ENABLE():
-    return True
+    return False
 
 def DEBUG_STARTUP_DISABLE():
-    return True
+    return False
 
 def STARTUP_DEBUG_CHECK():
     if DEBUG_STARTUP_DISABLE() == False:
