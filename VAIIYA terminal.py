@@ -631,11 +631,21 @@ def VRRALSA_COMMAND_PANEL():
             print("V.R.C.L. ERROR; KEYWORD DOES NOT LINK TO RECORD OR LOG. CHECK SPELLING, CAPS, OR OTHER.")
 #END OF THE VRCL COMMAND SYSTEM
 
-#BELOW IS THE DEBUG COMMANDLINE ENABLE, SET TO TRUE FOR IT TO WORK.  
+#BELOW IS THE DEBUG COMMANDLINE ENABLE, SET TO TRUE FOR IT TO WORK.  FALSE FOR RELEASE
 def DEBUG_ENABLE():
     return True
 
+def DEBUG_STARTUP_DISABLE():
+    return True
 
+def STARTUP_DEBUG_CHECK():
+    if DEBUG_STARTUP_DISABLE() == False:
+        check_for_update_plz()
+        startup_screen_ascii_roll()
+        loading_bars_combined_startup()
+    
+    if DEBUG_STARTUP_DISABLE() == True:
+        pass
 
 
 def terminal_startup_combined():
@@ -653,9 +663,7 @@ def loading_bars_combined_startup():
 
 # Main system loop
 def game_loop():
-    check_for_update_plz()
-    startup_screen_ascii_roll()
-    loading_bars_combined_startup()
+    STARTUP_DEBUG_CHECK()
     terminal_startup_combined()
     
     while True:
