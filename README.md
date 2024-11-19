@@ -1,13 +1,12 @@
 # Welcome to the VAIIYA terminal project page!
 
-Welcome to the VAIIYA Terminal project page!! 
-I am very happy to show you all my VAIIYA TERMINAL passion project! 
-the real purpose for this "game" was just an idea and a very far fetched idea that Embark Rob may collab with it ( I still think its far fetched but it is a good learning course! )
+Welcome VAIIYA trustees and fellow THE FINALS contestants!
+welcome to my VAIIYA terminal project page! 
 
-and that i saw how much retro stuff (eg, the commandprompt credits screen for S2 and S3.) was used and i saw how VAIIYA would use somthing like that. 
+VAIIYA terminal is a for-fun project made by me and serves mostly the purpose of being entertainment and a story module! 
+I hope you can join me on my long journey of making this dream come true with me! 
 
-also as a side note: this will be a very good experemantation for password protected encryption as the sourcecode is here on github. so dont be alarmed if there is some gobbleygook in the code :3 
- 
+
 
 # The game
 **IMPRORTANT NOTE: THE VAIIYA TERMINAL EXE's HAVE FLAGGED WINDOWS SMART APP CONTROL DUE TO THE EXE's NOT BEING SIGNED. YOU CAN SAFELY IGNORE THESE WARNINGS.**
