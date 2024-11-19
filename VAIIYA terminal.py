@@ -291,7 +291,7 @@ def open_terminal():
 
 
         #BELOW IS THE DEBUG COMMANDLINE, DO NOT LEAVE ON FOR RELEASE!     
-        #elif text == 'DEBUG':
+        elif text == 'DEBUG':
             DEBUG_COMMANDLINE()
 
 
@@ -330,32 +330,34 @@ def open_terminal():
 
 #MAKE SURE THIS IS DISABLED BEFORE RELEASE!!! 
 def DEBUG_COMMANDLINE():
-    
-    while True:
-        text = prompt('DEBUG COMMANDLINE >>> ')        
+    if DEBUG_ENABLE() == True:
 
-        if text == 'VRRALSA':
-            VRRALSA_startup()
+        while True:
+            text = prompt('DEBUG COMMANDLINE >>> ')        
 
-        elif text == 'WALKER':
-            walker_entered()
+            if text == 'VRRALSA':
+                VRRALSA_startup()
 
-        elif text == 'FROST':
-            frostbyte_entered()
+            elif text == 'WALKER':
+                walker_entered()
 
-        elif text == 'COMMANDS':
-            print("commands:")
-            print("VRRALSA")
-            print("WALKER")
-            print("FROST")
-            print("EXIT")
+            elif text == 'FROST':
+                frostbyte_entered()
+
+            elif text == 'COMMANDS':
+                print("commands:")
+                print("VRRALSA")
+                print("WALKER")
+                print("FROST")
+                print("EXIT")
                 
-        elif text == 'EXIT':
-            break
+            elif text == 'EXIT':
+                break
 
-        else:
-            print("use COMMANDS if you forgot")
-
+            else:
+                print("use COMMANDS if you forgot")
+    if DEBUG_ENABLE() == False:
+        print("hahaha good try (￣y▽,￣)╭ ")
 
 
 
@@ -460,9 +462,11 @@ def walker_entered():
 
 # FROST EE STUFF OVER HERE!
 def frostbyte_login():
-    userpassword = text = input_dialog(
+    userpassword = input_dialog(
     title='frostbyte password input',
-    text='frostbyte password:').run()
+    text='frostbyte password:',
+    password=True,
+    ).run()
     
     userpassword = userpassword.encode('utf-8')
                
@@ -470,6 +474,7 @@ def frostbyte_login():
     result = bcrypt.checkpw(userpassword, frosthash)
     if result:
           frostbyte_entered()
+
 
 
 
@@ -626,21 +631,40 @@ def VRRALSA_COMMAND_PANEL():
             print("V.R.C.L. ERROR; KEYWORD DOES NOT LINK TO RECORD OR LOG. CHECK SPELLING, CAPS, OR OTHER.")
 #END OF THE VRCL COMMAND SYSTEM
 
+#BELOW IS THE DEBUG COMMANDLINE ENABLE, SET TO TRUE FOR IT TO WORK.  FALSE FOR RELEASE
+def DEBUG_ENABLE():
+    return False
+
+def DEBUG_STARTUP_DISABLE():
+    return False
+
+def STARTUP_DEBUG_CHECK():
+    if DEBUG_STARTUP_DISABLE() == False:
+        check_for_update_plz()
+        startup_screen_ascii_roll()
+        loading_bars_combined_startup()
+    
+    if DEBUG_STARTUP_DISABLE() == True:
+        pass
 
 
-
-# Main system loop
-def game_loop():
-    check_for_update_plz()
-    startup_screen_ascii_roll()
-    loading_bars_intro_1()
-    loading_bars_intro_2()
-    loading_bars_intro_3()
+def terminal_startup_combined():
     main_menu()
     message_of_the_day()
     timefetch()
     terminal_start_message()
     open_terminal()
+
+def loading_bars_combined_startup():
+    loading_bars_intro_1()
+    loading_bars_intro_2()
+    loading_bars_intro_3()
+
+
+# Main system loop
+def game_loop():
+    STARTUP_DEBUG_CHECK()
+    terminal_startup_combined()
     
     while True:
         #there is no code to run right before startup so there is a `pass` here. 
