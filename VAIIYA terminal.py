@@ -13,6 +13,7 @@ from datetime import datetime
 from prompt_toolkit import print_formatted_text, HTML
 import random
 import tkinter.messagebox 
+import sys
 #changes the size of the Command prompt so it is easier to read (and that the ASCII doesnt soft wrap)
 
 def check_for_update_plz():
