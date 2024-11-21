@@ -567,12 +567,17 @@ def VRRALSA_COMMAND_PANEL():
         if  VRRALSA_TEXT == 'test':
             print("yes I do believe it works! ")
         
+        elif VRRALSA_TEXT == 'logs':
+            print("|")
+            print("ERROR; NO LOGS FOUND AT THE MOMENT. PLEASE WAIT FOR NEXT PATCH.")
 
         elif VRRALSA_TEXT == 'records':
             print("|")
             print("record; walker")
             print("record; frostbyte")
             print("record; violet ")
+        #only the logs and records commands here! 
+
 
         elif VRRALSA_TEXT == 'violet':
             print("|")
@@ -619,10 +624,39 @@ def VRRALSA_COMMAND_PANEL():
             print("health_record_status=True current_records=17 record_severity=low highest_alert=heart_attack_of_coffee")
             print("end of file.")
             print("|")
-
-
-
-
+        #please put all records above here
+        #put all logs below here! 
+        elif VRRALSA_TEXT == 'LOG_10079':
+            print("|")
+            print("V.R.R.A.L.S.A. FINDING INQUIRY....")
+            time.sleep(1)
+            print("searching database... ")
+            time.sleep(1)
+            print("Log Found!")
+            print("|")
+            print("VAIIYA systems log #10079 title=whats going on? from=employee#4972 name=herbert to=system_wide")
+            print("|")
+            print("herbert: hello? hey guys whats going on over there? i keep getting error [CO45RuP43D #G453] all over the system!")
+            print("-")
+            print("herbert: @security_dev do we have a fix for this? like, I CANT DO MY JOB KINDA ISSUE HERE")
+            print("-")                                                                                  #this is as far the terminal can go before softwrap
+            print("greg@security: hey herbert! uhh, ive never seen that error code before... wait thats not even a VAIIYA engine error!")
+            print(">uh oh...")
+            print("-")
+            print("herbert: well do we have a fix at all? i cant do my job here! my machine is frozen with ")
+            print("> 'damn you guys like a fight coming' message flashing!")
+            print("-")
+            print("greg@security: No you idiot! thats not a VAIIYA engine error!! do you know what this means?! do you not see that")
+            print("> mysterious message!?")
+            print("-")
+            print("herbert: uhh, no? im just trying to do my job man!")
+            print("-")
+            print("greg@security: YOU IDIOT CNS GOT INTO YOUR DAMN MACHINE!!!!!!!!!!")
+            print("-")
+            print("herbert: well shi-")
+            print("|")
+            print("ERROR! LOG ENDED WITH CODE #570-A. ESTIMATED LOSS: 39% OF FILE LEFT. ")
+            print("End of log.")
 
         elif VRRALSA_TEXT == 'exit':
             return
@@ -634,10 +668,10 @@ def VRRALSA_COMMAND_PANEL():
 
 #BELOW IS THE DEBUG COMMANDLINE ENABLE, SET TO TRUE FOR IT TO WORK.  FALSE FOR RELEASE
 def DEBUG_ENABLE():
-    return False
+    return True
 
 def DEBUG_STARTUP_DISABLE():
-    return False
+    return True
 
 def STARTUP_DEBUG_CHECK():
     if DEBUG_STARTUP_DISABLE() == False:
