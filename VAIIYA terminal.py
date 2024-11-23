@@ -430,7 +430,7 @@ def walker_login():
     userpassword = text = input_dialog(
     title='Walker password input',
     text='walker password:',
-    password=True
+    password=True,
     ).run()
     #encodes the given password for compare
     userpassword = userpassword.encode('utf-8')
@@ -443,9 +443,6 @@ def walker_login():
 
 
 def walker_entered():
-    print("welcome walker! here currently there is nothing, i have no idea what to put here for you guys.")
-    print("but id assume you are familiar with github so if you have an idea i would more than glad take a look and try to implement it! ")
-    
     
     print("|")
     print("|")
@@ -475,7 +472,7 @@ def frostbyte_login():
     userpassword = input_dialog(
     title='frostbyte password input',
     text='frostbyte password:',
-    ,
+    password=True,
     ).run()
     
     userpassword = userpassword.encode('utf-8')
@@ -498,7 +495,7 @@ def frostbyte_entered():
     
     message_dialog(
     title='VAIIYA Warning systems',
-    text='VAIIYA employee T342 has marked you as "requires careful observation and mental medical attention." so the VAIIYA system observation drones will now observe you.').run()
+    text='VAIIYA employee T342 has marked you as "requires careful observation and mental medical attention." thankyou for your cooperation.').run()
 
     message_dialog(
     title='VAIIYA Warning systems',
