@@ -429,7 +429,9 @@ def walker_login():
     #password prompt; 
     userpassword = text = input_dialog(
     title='Walker password input',
-    text='walker password:').run()
+    text='walker password:',
+    password=True
+    ).run()
     #encodes the given password for compare
     userpassword = userpassword.encode('utf-8')
 
@@ -473,7 +475,7 @@ def frostbyte_login():
     userpassword = input_dialog(
     title='frostbyte password input',
     text='frostbyte password:',
-    password=True,
+    ,
     ).run()
     
     userpassword = userpassword.encode('utf-8')
