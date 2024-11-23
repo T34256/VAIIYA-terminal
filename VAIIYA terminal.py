@@ -190,7 +190,7 @@ def message_of_the_day(): #or per boot
     print("The message of the day is: ")
     print("|") 
     #picks a random number, each value (depending on how many messages) will have a number. 
-    MOTD = random.randint(1,5)
+    MOTD = random.randint(1,6)
 
     if MOTD == 1: 
         print("john? what the hell are you doing over there? GET BACK TO WO- ##TRANSCRIPT ENDED CODE 87##")
@@ -202,6 +202,9 @@ def message_of_the_day(): #or per boot
         print("VRRALSA systems detecting ##isU3s## within servers #342 and #902. please advise.")
     elif MOTD == 5:
         print("VAIIYA Engine update found! Please install immediately for best security. Thankyou for understanding.")
+    #remove this MOTD on the next update PAST christmas, maybe new years or when the snow melts. 
+    elif MOTD == 6:
+        print("merry christmas VAIIYA employees! except for herbert...")
 
 def timefetch():
 #time fetch for login
@@ -211,7 +214,7 @@ def timefetch():
     print("""|""")
     print('Welcome VAIIYA trustee! the time is: ',curtime)
     print('and the date is: ',curdate)
-    print("have a wonderful day at VAIIYA Technologies LLC!")
+    print("have a wonderful CHRISTMAS day at VAIIYA Technologies LLC!")
     print("""|""")
 
 #this is here so that this doesnt dupe every time the commandline reprints. it now only happens once.
