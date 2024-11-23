@@ -190,7 +190,7 @@ def message_of_the_day(): #or per boot
     print("The message of the day is: ")
     print("|") 
     #picks a random number, each value (depending on how many messages) will have a number. 
-    MOTD = random.randint(1,3)
+    MOTD = random.randint(1,4)
 
     if MOTD == 1: 
         print("john? what the hell are you doing over there? GET BACK TO WO- ##TRANSCRIPT ENDED CODE 87##")
@@ -198,6 +198,8 @@ def message_of_the_day(): #or per boot
         print("Remember: CNS is our greatest enemy! WE CANNOT LET THEM INTO THE SYSTE- ## LOG SYSTEM FAILURE CODE #9)*^9 ##")
     elif MOTD == 3:
         print("SYSTEM AUTOLOG OVERRIDE: SERVERS #108,#196,#102,#156,#342 HAVE BEEN ISOLATED. DO NOT CHANGE THIS ORDER.")
+    elif MOTD == 4:
+        print("VRRALSA systems detecting ##isU3s## within servers #342 and #902. please advise.")
 
 def timefetch():
 #time fetch for login
