@@ -14,6 +14,7 @@ from prompt_toolkit import print_formatted_text, HTML
 import random
 import tkinter.messagebox 
 import sys
+from prompt_toolkit import print_formatted_text
 #changes the size of the Command prompt so it is easier to read (and that the ASCII doesnt soft wrap)
 
 def check_for_update_plz():
@@ -62,7 +63,7 @@ _____      _____  ______  _____  _____  _____      _____  ______
 
 # Loading screen with VAIIYA SECURITY ASCII Art
 def norm_startup_screen_ASCII():
-    print(r"""
+    print_formatted_text(r"""
 
  
                                              __________   __________
