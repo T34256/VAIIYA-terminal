@@ -4,7 +4,7 @@
 <div align="center">
 	<p>
      <object>
-		<img alt="Discord" src="https://img.shields.io/discord/1279687931786694706?style=plastic&label=The%20VAIIYA%20Hub%20discord%20server!&link=https%3A%2F%2Fdiscord.gg%2FQt5Je9sFE5">
+		<a href="https://discord.gg/Qt5Je9sFE5" target="_blank"><img alt="Discord" src="https://img.shields.io/discord/1279687931786694706?style=plastic&label=The%20VAIIYA%20Hub%20discord%20server!&link=https%3A%2F%2Fdiscord.gg%2FQt5Je9sFE5">
      </object>
 	</p>
 </div>
