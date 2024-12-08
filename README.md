@@ -48,12 +48,12 @@ Hello fello VAIIYA Trustees! if you want to help with the progress of VAIIYA Ter
 1. get Github desktop if you dont have it already :3  
 
 > [!IMPORTANT] 
-> *make sure you are using a **global** installation of python 3 for it to recognise the installed modules! if you use the "recommended" one with VS code, you will get errors of `reportMissingImports`!*  
+> *make sure you are using a **global** installation of python 3 for it to recognise the installed modules! if you use the "recommended" python3 installation from VScode, you will get errors of `reportMissingImports`!*  
 > get the latest release here: [python downloads](https://www.python.org/downloads/)
 
 2. Clone the repository and get dependencies 
      - clone the repository with the HTTPS method through Github desktop 
-     - open the filestructure in VS code or your perferred IDE 
+     - open the filestructure in VScode or your perferred IDE 
      - install dependencies inside the filestructure with `pip install -r requirements.txt` 
      - run `VAIIYA terminal.py` with the run button in VScode or your own IDE to see if everything is working! 
   
