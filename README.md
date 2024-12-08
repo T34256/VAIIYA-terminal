@@ -1,3 +1,7 @@
+![github VAIIYA readme logo](https://github.com/user-attachments/assets/cd83c6e0-63b5-4449-b1ff-71d29c505de3)
+
+
+
 # Welcome to the VAIIYA terminal project page!
 
 Welcome VAIIYA trustees and fellow THE FINALS contestants!
@@ -9,8 +13,9 @@ I hope you can join me on my long journey of making this dream come true with me
 
 
 # The game
-**IMPRORTANT NOTE: THE VAIIYA TERMINAL EXE's HAVE FLAGGED WINDOWS SMART APP CONTROL DUE TO THE EXE's NOT BEING SIGNED. YOU CAN SAFELY IGNORE THESE WARNINGS.**
 
+> [!CAUTION]
+> **THE VAIIYA TERMINAL EXE's HAVE FLAGGED WINDOWS SMARTSCREEN CONTROL MOST LIKELY DUE TO THE EXE's NOT BEING SIGNED. YOU CAN SAFELY IGNORE THESE WARNINGS.**
 
 ![image](https://github.com/user-attachments/assets/eb8b47da-1184-4fe8-b588-1e2154a52b9a)
 
@@ -20,15 +25,35 @@ I hope you can join me on my long journey of making this dream come true with me
 ![image](https://github.com/user-attachments/assets/c2ffad7a-6e5e-4eff-a8dc-fbc543b17fb8)
 
 
+> [!NOTE]
+> all images were uploaded durring v10 or 0.0.10, things are subject to change!
 
-all images were uploaded durring v10 or 0.0.10, things are subject to change! 
 
 
 
-# install dependencies 
+# Contributing 
 
-please clone the repository, and install the dependencies with this command: 
+Hello fello VAIIYA Trustees! if you want to help with the progress of VAIIYA Terminal, here are some basic rules and things to know!  
 
-```
-pip install -r requirements.txt
-```
+### Setup
+
+1. get Github desktop if you dont have it already :3  
+
+2. Clone the repository and get dependencies 
+     - clone the repository with the HTTPS method through Github desktop 
+     - open the filestructure in VS code or your perferred IDE 
+     - install dependencies inside the filestructure with `pip install -r requirements.txt` 
+     - run `VAIIYA terminal.py` with the run button in VScode or your own IDE to see if everything is working! 
+> [!IMPORTANT] 
+> *make sure you are using a **global** installation of python 3 for it to recognise the installed modules! if you use the "recommended" one with VS code, you will get errors of `reportMissingImports`!*  
+> get the latest release here: [python downloads](https://www.python.org/downloads/)
+
+and thats all for setup! 
+
+### Contributing rules 
+
+1. any new changes when being merged get sent to the experimental branch. 
+2. large changes **can** have their own branch, then will be merged to the experimental branch later on. 
+
+> [!NOTE]
+> these contributing rules are still very scratched together for now, so a lot of self judgement will be applied for new rules to form. 
