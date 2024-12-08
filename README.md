@@ -1,6 +1,14 @@
 ![github VAIIYA readme logo](https://github.com/user-attachments/assets/cd83c6e0-63b5-4449-b1ff-71d29c505de3)
 
 
+<div align="center">
+	<p>
+     <object>
+		<img alt="Discord" src="https://img.shields.io/discord/1279687931786694706?style=plastic&label=The%20VAIIYA%20Hub%20discord%20server!&link=https%3A%2F%2Fdiscord.gg%2FQt5Je9sFE5">
+     </object>
+	</p>
+</div>
+
 
 # Welcome to the VAIIYA terminal project page!
 
