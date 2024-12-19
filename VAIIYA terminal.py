@@ -1,4 +1,4 @@
-from ctypes import wintypes
+
 import time
 import os
 from prompt_toolkit.shortcuts import ProgressBar
@@ -14,12 +14,12 @@ from prompt_toolkit import print_formatted_text, HTML
 import random
 import tkinter.messagebox 
 import sys
-from prompt_toolkit import print_formatted_text
 #changes the size of the Command prompt so it is easier to read (and that the ASCII doesnt soft wrap)
+#from ctypes import wintypes
+#from ctypes import windll, byref
+#from ctypes.wintypes import SMALL_RECT    
 
-def check_for_update_plz():
-    tkinter.messagebox.showinfo(title='Check for updates :3', message='hey! check to see if you are using the latest version! :3')
-    
+
 
 #this idea was requested by Smashel on issue #30. 
 #default value is 1-5650
@@ -65,7 +65,6 @@ _____      _____  ______  _____  _____  _____      _____  ______
 def norm_startup_screen_ASCII():
     print_formatted_text(r"""
 
- 
                                              __________   __________
                                              \|||||||||\ \::::::::::\
                                               \|||||||||\ \::::::::::\
@@ -191,14 +190,14 @@ def message_of_the_day(): #or per boot
     print("The message of the day is: ")
     print("|") 
     #picks a random number, each value (depending on how many messages) will have a number. 
-    MOTD = random.randint(1,6)
+    MOTD = 3#random.randint(1,6)
 
     if MOTD == 1: 
         print("john? what the hell are you doing over there? GET BACK TO WO- ##TRANSCRIPT ENDED CODE 87##")
     elif MOTD == 2: 
         print("Remember: CNS is our greatest enemy! WE CANNOT LET THEM INTO THE SYSTE- ## LOG SYSTEM FAILURE CODE #9)*^9 ##")
     elif MOTD == 3:
-        print("SYSTEM AUTOLOG OVERRIDE: SERVERS #108,#196,#102,#156,#342 HAVE BEEN ISOLATED. DO NOT CHANGE THIS ORDER.")
+        print_formatted_text(HTML('<b>SYSTEM AUTOLOG OVERRIDE: SERVERS #108,#196,#102,#156,#342 HAVE BEEN ISOLATED. DO NOT CHANGE THIS ORDER.</b>'))
     elif MOTD == 4:
         print("VRRALSA systems detecting ##isU3s## within servers #342 and #902. please advise.")
     elif MOTD == 5:
@@ -206,6 +205,8 @@ def message_of_the_day(): #or per boot
     #remove this MOTD on the next update PAST christmas, maybe new years or when the snow melts. 
     elif MOTD == 6:
         print("merry christmas VAIIYA employees! except for herbert...")
+    elif MOTD == 7:
+        print("Well well everyone! We got another highlight within THE FINALS! CNS cannot stop us now!. . . eh, john what is that over there? ## END OF FILE ##")
 
 def timefetch():
 #time fetch for login
@@ -261,10 +262,10 @@ def open_terminal():
             
         elif text == 'version':
             print("|")
-            print("VAIIYA Terminal Engine version 23.58-B ")
+            print("VAIIYA Terminal Engine version 24.39-overhaul_8")
             print("detected operating device: IBM 5150 VAIIYA secure system fitted.")
             print("OS system detected: MuCoDOS V27.592 private")
-            print("VAIIYA Terminal release V10")
+            print("VAIIYA Terminal release V11")
             print("|")
             #the link given will NEVER EXPIRE
         elif text == 'discord':
@@ -282,14 +283,14 @@ def open_terminal():
         
         #walkers login, requires password. this will print the following, stop for 3 secs and then runs the `walker_login()`.
         elif text == 'walker':
-            print("welcome walker to your login! please wait while your coffee brews.......")
+            print("Welcome walker to your login! Please wait while your coffee brews.......")
             time.sleep(3)
             walker_login()
 
         #the `no-command bug has been resolved.` 
         # FROST EE WIP!! 
         elif text == 'frostbyte':
-            print("welcome frostbyte to your login! please wait while i startup the supercomputer and freeze these bytes!....")
+            print("Welcome frostbyte to your login! Please wait while I startup the supercomputer and freeze these bytes!....")
             time.sleep(3)
             #enters the frostbyte EE
             frostbyte_login()
@@ -576,7 +577,9 @@ def VRRALSA_COMMAND_PANEL():
         
         elif VRRALSA_TEXT == 'logs':
             print("|")
-            print("ERROR; NO LOGS FOUND AT THE MOMENT. PLEASE WAIT FOR NEXT PATCH.")
+            print("Current logs found in databases: ")
+            print("log: LOG_10079")
+            print("No other logs at this time")
 
         elif VRRALSA_TEXT == 'records':
             print("|")
@@ -662,8 +665,39 @@ def VRRALSA_COMMAND_PANEL():
             print("-")
             print("herbert: well shi-")
             print("|")
-            print("ERROR! LOG ENDED WITH CODE #570-A. ESTIMATED LOSS: 39% OF FILE LEFT. ")
+            print_formatted_text(HTML('<red>ERROR! LOG ENDED WITH CODE #570-A. ESTIMATED LOSS: 39% OF FILE LEFT.</red>'))
             print("End of log.")
+        
+        elif VRRALSA_TEXT == 'LOG_342!&': 
+            print("|")
+            print("V.R.R.A.L.S.A. FINDING INQUIRY....")
+            time.sleep(1)
+            print("searching database... ")
+            time.sleep(1)
+            print("Log Found!")
+            print("|")
+            print("VAIIYA systems log #342!& title=CORR&PTIO@NS from=employee#342 name=johnathan to=system_wide")
+            print("|")
+            print("johnathan: Hey GUYS! whats with all the CORR$PTION$? the server are also going HAYWIRE! my entire floors computers and servers are giving errors!")
+            print("-")
+            print("alfred@networking: heyoh johnny! wow... this is bad! ive seen another message about herbert and greg having beef over the same thing... ")
+            print("> herbert is the kind where he wants fixes and instantly... too bad sal likes his 'higher then heaven' ass ￣へ￣")
+            print("-")
+            print("johnathan: yooo alfred! thanks for the info! but back to the 'issues' going around... this is getting bad and sal is in the dark somehow! (´･ω･`)? ")
+            print("-")
+            print("alfred@networking: wait... is anyone in @server and @security using ports 2000 and 217? they are... open (。_。) and transferring files???? ")
+            print("-")
+            print("bret@security: Hi alfred! no not us! that is a bit odd... our team will look at it \(￣︶￣*\)) ")
+            print("-")
+            print("Yankovic@servers: Hi bret and alfred! No our servers, nor the new VAIIYA Engine is configured, let alone able to use those ports! odd (´･ω･`)? ")
+            print("-")
+            print("alfred@networking: johnny you know what ima say?")
+            print("-")
+            print("johnathan: I know you too well alfred (ﾉ*･ω･)ﾉ ")
+            print("-")
+            print("alfred@networking: well, shi- ## TRANSCRIPT ENDED CODE 7$()>? ## ")
+
+
 
         elif VRRALSA_TEXT == 'exit':
             return
@@ -682,7 +716,6 @@ def DEBUG_STARTUP_DISABLE():
 
 def STARTUP_DEBUG_CHECK():
     if DEBUG_STARTUP_DISABLE() == False:
-        check_for_update_plz()
         startup_screen_ascii_roll()
         loading_bars_combined_startup()
     
@@ -702,7 +735,6 @@ def loading_bars_combined_startup():
     loading_bars_intro_2()
     loading_bars_intro_3()
 
-
 # Main system loop
 def game_loop():
     STARTUP_DEBUG_CHECK()
@@ -718,3 +750,9 @@ game_loop()
 #this func is not required for the operation of the program, so it is disabled.
 #if __name__ == "__main__":
 #        main()
+
+
+
+
+#VRRALSA notes 
+# employee#4972 or herbert does not like greg. (⊙_⊙)？
